@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Reservation</title>
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      <img src="img/Logo.jpg" />
+    </a>
+    <div class="nav-list">
+      <a href="tour_list.html">Book a tour</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <div class="reservation-area">
+    <div class="reservation-container">
+      <div class="progress-bar">
+        <div class="active-icon">1</div>
+        <span>Info</span>
+        <div class="center-line"></div>
+        <div class="unactive-icon">2</div>
+        <span>Payment</span>
+      </div>
+
+      <form class="reservation-form">
+        <h5 class="reservation-title">Complete your order</h5>
+        <div class="info-container">
+          <h6 class="info-title">Traveler Info</h6>
+          <div class="row">
+            <div class="form-group">
+              <label for="name">Full name (first and last)</label>
+              <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+              <label for="number">Cell phone number*</label>
+              <input type="text" id="number" name="number">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+              <label for="confirm-email">Confirm Email Address *</label>
+              <input type="email" id="confirm-email" name="confirm-email">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="Country">Country</label>
+              <input type="text" id="country" name="country">
+            </div>
+          </div>
+        </div>
+        
+        <div class="info-container">
+          <h6 class="info-title">Additional Info</h6>
+          <textarea name="additional-info" id="additional-info" cols="30" rows="6" placeholder="Please let us know if you have any dietary restrictions, allergies, or other relevant needs.
+          "></textarea>
+        </div>
+
+        <div class="customer-checkbox">
+          <input type="checkbox" id="policy-acceptance" name="policy-acceptance">
+          <label for="policy-acceptance"><p>I have read and agree to the Cancelation Policy, Terms and Conditions, and Privacy Policy</p></label>
+        </div>
+
+        <div class="complete-order-btn">
+          
+            <button><a href="payment.html"> Complete Order</a></button>
+ 
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+
+
+
+  <footer>
+    <div class="contact-container">
+      <div class="contact-info">
+      <p class="contact-title">Contact Information:</p> 
+      <div class="contact-item">Address: 123 Paris Street, Paris, France</div>
+      <div class="contact-item">Phone: +33 123 456 789</div>
+      <div class="contact-item">Email: info@roostertravel.com</div>
+    </div>
+    <div class="contact-links">
+      <p class="contact-title">Links:</p>
+      <a href="index.html">Home</a>
+      <a href="tour_list.html">Tours</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="contact-social-media">
+      <div class="media-icons">
+        <p class="contact-title">Social Media:</p>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+</body>
+</html>
