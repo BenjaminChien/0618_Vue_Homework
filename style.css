@@ -725,7 +725,7 @@ footer{
 }
 
 .banner-container img{
-  width: 1895px;
+  width: 100%;
 }
 
 .banner-title{
@@ -770,6 +770,10 @@ footer{
   color: #000000;
 }
 
+.list-container{
+  width: 100%;
+}
+
 .list-title{
   padding-top: 50px;
   padding-left: 60px;
@@ -779,7 +783,12 @@ footer{
   display: flex;
 }
 
+.list-card-wrap img{
+  width: 100%;
+}
+
 .list-card{
+  width: 33.333333%;
   padding: 31px 17px;
   border-top: #000000 1px solid;
   border-left:#000000 1px solid;
@@ -903,10 +912,16 @@ footer{
   width: 600px;
 }
 
-.notices-list p{
-  text-indent: -1em;
+
+.notices-list li{
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 180%;
+  letter-spacing: 0.005em;
   position: relative;
-  left: 1em;
+  left : -1em;
   padding: 10px 0px;
 }
 
@@ -1017,15 +1032,16 @@ footer{
   letter-spacing: 0.005em;
 }
 
+
 .about-landing-area{
   display: flex;
   justify-content: center;
 }
 
-
 .about-title-container h2{
-  padding: 30px 360px;
-  width: 1200px;
+  padding: 30px 340px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .who-area{
