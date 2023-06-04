@@ -38,56 +38,87 @@
         <span>Payment</span>
       </div>
 
-      <form class="reservation-form">
-        <h5 class="reservation-title">Complete your order</h5>
-        <div class="info-container">
-          <h6 class="info-title">Traveler Info</h6>
-          <div class="row">
-            <div class="form-group">
-              <label for="name">Full name (first and last)</label>
-              <input type="text" id="name" name="name">
+      <div class="reservation-wrap">
+        <form class="reservation-form">
+          <h5 class="reservation-title">Complete your order</h5>
+          <div class="info-container">
+            <h6 class="info-title">Traveler Info</h6>
+            <div class="row">
+              <div class="form-group">
+                <label for="name">Full name (first and last)</label>
+                <input type="text" id="name" name="name">
+              </div>
+              <div class="form-group">
+                <label for="number">Cell phone number*</label>
+                <input type="text" id="number" name="number">
+              </div>
             </div>
-            <div class="form-group">
-              <label for="number">Cell phone number*</label>
-              <input type="text" id="number" name="number">
+            <div class="row">
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email">
+              </div>
+              <div class="form-group">
+                <label for="confirm-email">Confirm Email Address *</label>
+                <input type="email" id="confirm-email" name="confirm-email">
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group">
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country">
+              </div>
             </div>
           </div>
-          <div class="row">
-            <div class="form-group">
-              <label for="email">Email address</label>
-              <input type="email" id="email" name="email">
+  
+          <div class="info-container">
+            <h6 class="info-title">Additional Info</h6>
+            <textarea name="additional-info" id="additional-info" cols="30" rows="6" placeholder="Please let us know if you have any dietary restrictions, allergies, or other relevant needs.
+            "></textarea>
+          </div>
+  
+          <div class="customer-checkbox">
+            <input type="checkbox" id="policy-acceptance" name="policy-acceptance">
+            <label for="policy-acceptance"><p>I have read and agree to the Cancelation Policy, Terms and Conditions, and Privacy Policy</p></label>
+          </div>
+  
+          <div class="complete-order-btn">
+              <button><a href="payment.html"> Complete Order</a></button>
+          </div>
+        </form>
+
+        <div class="cart-summary-area">
+          <div class="cart-summary-container">
+            <div class="cart-summary-title">
+              <h6>Cart Summary</h6>
+              <p>You have 1 item in your cart</p>
             </div>
-            <div class="form-group">
-              <label for="confirm-email">Confirm Email Address *</label>
-              <input type="email" id="confirm-email" name="confirm-email">
+            <div class="cart-summary-items">
+              <div class="summary-photo">
+                <img src="Img/summary_river.jpg" alt="">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span>Edit</span>
+              </div>
+              <div class="summary-text">
+                <span>May 8, 2023 9:00AM</span>
+                <p>Enchanting Seine: Captivating River Cruises</p>
+                <div class="item-price">
+                  <span>1 x Adults</span>
+                  <span>€‎€‎€‎</span>
+                </div>
+              </div>
+              <div class="cancel-container">
+                <i class="fa-sharp fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <div class="total-price">
+              <span>Total:</span>
+              <span class="price">€‎€‎€‎</span>
             </div>
           </div>
-          <div class="row">
-            <div class="form-group">
-              <label for="Country">Country</label>
-              <input type="text" id="country" name="country">
-            </div>
-          </div>
-        </div>
-        
-        <div class="info-container">
-          <h6 class="info-title">Additional Info</h6>
-          <textarea name="additional-info" id="additional-info" cols="30" rows="6" placeholder="Please let us know if you have any dietary restrictions, allergies, or other relevant needs.
-          "></textarea>
         </div>
 
-        <div class="customer-checkbox">
-          <input type="checkbox" id="policy-acceptance" name="policy-acceptance">
-          <label for="policy-acceptance"><p>I have read and agree to the Cancelation Policy, Terms and Conditions, and Privacy Policy</p></label>
-        </div>
-
-        <div class="complete-order-btn">
-          
-            <button><a href="payment.html"> Complete Order</a></button>
- 
-        </div>
-      </form>
-
+      </div>
     </div>
   </div>
 

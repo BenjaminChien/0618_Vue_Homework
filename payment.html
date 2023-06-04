@@ -39,42 +39,73 @@
         <span>Payment</span>
       </div>
 
-      <form class="reservation-form">
-        <div class="info-container">
-          <h6 class="info-title">Payment Info</h6>
-          <div class="row payment-row">
-            <div class="form-group card-number">
-              <label for="card-number">Card number</label>
-              <input type="text" id="card-number" name="card-number">
+      <div class="reservation-wrap">
+        <form class="reservation-form">
+          <div class="info-container">
+            <h6 class="info-title">Payment Info</h6>
+            <div class="row payment-row">
+              <div class="form-group card-number">
+                <label for="card-number">Card number</label>
+                <input type="text" id="card-number" name="card-number">
+              </div>
+              <div class="form-group expire-date">
+                <label for="expire-date">Expire Date</label>
+                <input type="date" id="expire-date" name="expire-date">
+              </div>
+              <div class="form-group cvc">
+                <label for="cvc">CVC</label>
+                <input type="text" id="cvc" name="cvc">
+              </div>
             </div>
-            <div class="form-group expire-date">
-              <label for="expire-date">Expire Date</label>
-              <input type="date" id="expire-date" name="expire-date">
-            </div>
-            <div class="form-group cvc">
-              <label for="cvc">CVC</label>
-              <input type="text" id="cvc" name="cvc">
+            <div class="row">
+              <div class="form-group">
+                <label for="payment-country">Nation/ Area</label>
+                <input type="text" id="payment-country" name="payment-country">
+              </div>
             </div>
           </div>
-
-          <div class="row">
-            <div class="form-group">
-              <label for="payment-country">Nation/ Area</label>
-              <input type="text" id="payment-country" name="payment-country">
-            </div>
-          </div>
-        </div>
         
-        <div class="payment-btn-area">
-          <div class="go-back-btn">
-            <button><a href="reservation.html">Go Back</a></button>
+          <div class="payment-btn-area">
+            <div class="go-back-btn">
+              <button><a href="reservation.html">Go Back</a></button>
+            </div>
+            <div class="complete-order-btn">
+                <button><a href="index.html"> Pay Now</a></button>
+            </div>
           </div>
-          <div class="complete-order-btn">
-              <button><a href="#"> Pay Now</a></button>
+        </form>
+
+        <div class="cart-summary-area">
+          <div class="cart-summary-container">
+            <div class="cart-summary-title">
+              <h6>Cart Summary</h6>
+              <p>You have 1 item in your cart</p>
+            </div>
+            <div class="cart-summary-items">
+              <div class="summary-photo">
+                <img src="Img/summary_river.jpg" alt="">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span>Edit</span>
+              </div>
+              <div class="summary-text">
+                <span>May 8, 2023 9:00AM</span>
+                <p>Enchanting Seine: Captivating River Cruises</p>
+                <div class="item-price">
+                  <span>1 x Adults</span>
+                  <span>€‎€‎€‎</span>
+                </div>
+              </div>
+              <div class="cancel-container">
+                <i class="fa-sharp fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <div class="total-price">
+              <span>Total:</span>
+              <span class="price">€‎€‎€‎</span>
+            </div>
           </div>
         </div>
-      
-      </form>
+      </div>
 
     </div>
   </div>

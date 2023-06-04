@@ -32,7 +32,7 @@ h3{
 }
 
 h4{
-  font-family: 'Montserrat';
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -41,7 +41,7 @@ h4{
 }
 
 h5{
-  font-family: 'Montserrat';
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -50,7 +50,7 @@ h5{
 }
 
 h6{
-  font-family: 'Montserrat';
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -59,7 +59,7 @@ h6{
 }
 
 p {
-  font-family: "Montserrat";
+  font-family:"Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -246,21 +246,21 @@ header a {
 
 /*swiper*/
 .swiper-area {
-  width: 100%;
+  width: 80%;
+  margin: auto;
   padding-top: 354px;
 }
 
 .swiper-area .swiper-container {
-  display: flex;
-  justify-content: center;
   position: relative;
-  width: 100%;
+  margin: auto;
 }
 
 .swiper-area .swiper-card {
-  width: 1200px;
-  display: flex;
+  padding: 50px;
+  margin: 0 auto;
 }
+
 
 .swiper-area .swiper-photo {
   position: relative;
@@ -271,7 +271,7 @@ header a {
   height: 48px;
   position: absolute;
   top: -48px;
-  right: 31px;
+  left: 220px;
   background-color: #244974;
 }
 
@@ -297,8 +297,8 @@ header a {
 
 .swiper-area .swiper-text-block {
   position: absolute;
-  left: -107px;
-  top: 25px;
+  left: 525px;
+  top: -630px;
   box-sizing: border-box;
   width: 674px;
   height: 544px;
@@ -341,7 +341,10 @@ header a {
   position: absolute;
   top: 300px;
   right: 200px;
-}
+} 
+
+/*swiper*/
+
 
 /* intro-area */
 
@@ -603,6 +606,11 @@ header a {
 }
 
 .review-container{
+  width: 80%;
+  margin: auto;
+}
+
+.review-card {
   display: flex;
   justify-content: center;
   position: relative;
@@ -790,9 +798,9 @@ footer{
 .list-card{
   width: 33.333333%;
   padding: 31px 17px;
-  border-top: #000000 1px solid;
-  border-left:#000000 1px solid;
-  border-bottom:#000000 1px solid;
+  border-top: #D9D9D9 1px solid;
+  border-left:#D9D9D9  1px solid;
+  border-bottom:#D9D9D9  1px solid;
   display: flex;
   flex-direction: column;
   align-content: end;
@@ -825,12 +833,44 @@ footer{
   padding-top: 30px;
 }
 
+.card-rating{
+  display: flex;
+  justify-content: space-between;
+}
+
 .card-rating span{
   font-size: 30px;
 }
 
 .card-rating p{
+  display: inline;
   padding-left: 20px;
+}
+
+.card-rating i{
+  display: none;
+  font-size: 30px;
+  color: #222;
+}
+
+.list-card:hover{
+  background-color: #FEFCF9;
+  box-shadow: 0px 10px 24px -5px rgba(0,0,0,0.68);
+  -webkit-box-shadow: 0px 10px 24px -5px rgba(0,0,0,0.68);
+  -moz-box-shadow: 0px 10px 24px -5px rgba(0,0,0,0.68);
+  transition: box-shadow 0.4s;
+}
+
+@keyframes arrow-go-right {
+  0% {margin-right: 20px;}
+  100%{  margin-right: 0px;}
+}
+
+.list-card:hover .card-rating i{
+  display: block;
+  animation-name: arrow-go-right;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 /*tour_details */
@@ -959,17 +999,18 @@ footer{
   width: 600px;
   position: relative;
   left: 50px;
+  padding: 20px;
+  border: 1px solid #D9D9D9;
+  border-radius: 7px;
 }
 
-.calender-container a{
-  width: 470px;
-  height: 58px;
+.calender-container .book-button{
+  display: block;
+  width: 80%;
+  margin: 15px auto;
   background: #CDAB5E;
   border-radius: 11px;
   box-sizing: border-box;
-  position: absolute;
-  left: 15px;
-  top: 505px;
   text-decoration: none;
   line-height: 58px;
   text-align: center;
@@ -977,6 +1018,51 @@ footer{
   font-weight: 500;
   font-family: 'Montserrat';
   color: #000000;
+}
+
+.calender-form-title{
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.calender-form-title{
+  display: flex;
+  justify-content: space-between;
+}
+
+.calender-container .row{
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 0px;
+}
+
+.calender-container i{
+  color: #CDAB5E;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  padding: 20px ;
+}
+
+.calender-container select{
+  font-size: 24px;
+  padding-left: 2%;
+  width: 479px;
+}
+
+.calender-container .row input{
+  font-size: 24px;
+  width: 479px;
+}
+
+.cancel-policy-row{
+  text-align: center;
+  font-family:"Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 180%;
+  letter-spacing: 0.005em;
 }
 
 .details-review-area{
@@ -1137,6 +1223,7 @@ footer{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  gap: 5px;
 }
 
 .why-container p{
@@ -1187,9 +1274,12 @@ footer{
 .contact-us-form input{
   width: 421px;
   height: 47px;
-  font-size: 24px;
   border-radius: 7px;
   border: 1px solid #D9D9D9;
+  font-size: 20px;
+  padding: 0px 5px;
+  margin: 5px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .label-cmessage{
@@ -1199,10 +1289,12 @@ footer{
 #cmessage{
   width: 73%;
   overflow-wrap: wrap;
-  font-size: 24px;
+  font-size: 20px;
   border-radius: 7px;
   border: 1px solid #D9D9D9;
   resize: none;
+  padding: 7px 5px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .contact-us-form button{
@@ -1237,7 +1329,7 @@ footer{
   color: #fff;
   font-size: 20px;
   padding-left: 45px;
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 36px;
@@ -1264,7 +1356,12 @@ footer{
 }
 
 .reservation-container{
-  width: 1000px;
+  width: 65%;
+}
+
+.reservation-wrap{
+  display: flex;
+  justify-content: space-between;
 }
 
 .progress-bar{
@@ -1325,7 +1422,7 @@ footer{
 }
 
 .info-title{
-  padding: 10px 15px;
+  padding: 10px 10px;
 }
 
 .info-container .row{
@@ -1352,21 +1449,23 @@ footer{
   padding: 10px 5px;
   border-radius: 7px;
   border: 1px solid #D9D9D9;
+  font-family:"Montserrat", sans-serif;
 }
 
 #additional-info{
-  padding: 10px;
-  width: 98%;
+  padding: 10px 5px;
+  width: 96%;
   border-radius: 7px;
   border: 1px solid #D9D9D9;
-  font-family: 'Montserrat';
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 180%;
   letter-spacing: 0.005em;
   color: #000000;
   resize: none;
+  margin: 10px 20px;
 }
 
 .customer-checkbox{
@@ -1417,8 +1516,67 @@ footer{
   color: #4d4d4d;
 }
 
+.cart-summary-container{
+  border: 1px solid #000000;
+  border-radius: 7px;
+  padding: 15px 25px;
+  margin-left: 5%;
+}
+
+.cart-summary-items{
+  display: flex;
+  border-top: 1px solid #000000;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.cart-summary-items img{
+  border-radius: 2px;
+  display: block;
+}
+
+.cart-summary-items span{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 180%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #000000;
+  padding: 5px 5px;
+}
+
+.summary-text p{
+  padding: 0px 5px;
+}
+
+.item-price{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-container i{
+  font-size: 20px;
+  padding: 0px 10px 0px 20px;
+}
+
+.total-price{
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 180%;
+  letter-spacing: 0.005em;
+  justify-content: space-between;
+}
 
 
+
+
+
+/* payment */
 .card-number{
   width: 60%;
 }
@@ -1441,4 +1599,13 @@ footer{
 
 #payment-country{
   font-size: 24px;
+}
+
+.swiper {
+  width: 80%;
+  height: 600px;
+}
+
+.swiper-scrollbar{
+  display: none;  
 }

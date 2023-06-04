@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="style.css" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
@@ -74,35 +76,41 @@
       </div>
     </div>
 
+
+    
     <!--Swiper -->
     <div class="swiper-area">
       <div class="swiper-container">
-        <div class="left-arrow"><img src="Img/left_arrow.png" alt="" /></div>
-        <div class="right-arrow"><img src="Img/right_arrow.png" alt="" /></div>
         <div class="swiper-card">
-          <div class="swiper-photo">
-            <img src="Img/Seine_Cruise.jpg" alt="" />
-            <div class="top-block"></div>
-            <p class="bottom-block">01</p>
-          </div>
-          <div class="swiper-text">
-            <div class="swiper-text-block">
-              <h2 class="swiper-title ">
-                Enchanting Seine: <br />Captivating River Cruises
-              </h2>
-              <p class="swiper-description">
-                Experience the magic as iconic landmarks glide past,<br />
-                from the enchanting Notre-Dame Cathedral to the majestic Eiffel
-                Tower.
-              </p>
-              <div class="swiper-button">
-                <a href="tour_details.html"><button>Book now</button></a>
+            <div class="swiper-photo">
+              <img src="Img/Seine_Cruise.jpg" alt="" />
+              <div class="top-block"></div>
+              <p class="bottom-block">01</p>
+            </div>
+            <div class="swiper-text">
+              <div class="swiper-text-block">
+                <h2 class="swiper-title ">
+                  Enchanting Seine: <br />Captivating River Cruises
+                </h2>
+                <p class="swiper-description">
+                  Experience the magic as iconic landmarks glide past,<br />
+                  from the enchanting Notre-Dame Cathedral to the majestic Eiffel
+                  Tower.
+                </p>
+                <div class="swiper-button">
+                  <a href="tour_details.html"><button>Book now</button></a>
+                </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
+    </div> 
+
+    <!--Swiper -->
+    <div class="top-seller-area">
+      
     </div>
+
 
     <!--Intro-area -->
     <div class="intro-area">
@@ -218,11 +226,11 @@
     </div>
 
     <!--homepage-Review-->
-
-    <div class="homepage-review">
-      <div class="review-container">
-        <div class="left-arrow"><img src="Img/left_arrow.png" alt="" /></div>
-        <div class="right-arrow"><img src="Img/right_arrow.png" alt="" /></div>
+    <div class="swiper homepage-review">
+     <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">
+      <div class="review-card">
         <div class="review-text">
           <h2 class="quote">“</h2>
           <p class="comment">“ Our guide, Sarah, was incredibly passionate and well-versed in the art world. She expertly provided insightful commentary on the works of Monet and other renowned artists.”</p>
@@ -235,7 +243,49 @@
         </div>
       </div>
     </div>
-    
+    <div class="swiper-slide">
+      <div class="review-card">
+        <div class="review-text">
+          <h2 class="quote">“</h2>
+          <p class="comment">“ Our guide, Sarah, was incredibly passionate and well-versed in the art world. She expertly provided insightful commentary on the works of Monet and other renowned artists.”</p>
+          <p class="review-name">Marie Johnson</p>
+          <p class="review-tour">Musée de l'Orangerie Tour</p>
+        </div>
+        <div class="review-img">
+          <img src="Img/People_Chilling.jpg" alt="">
+          <div class="review-bottom-circle"></div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="review-card">
+        <div class="review-text">
+          <h2 class="quote">“</h2>
+          <p class="comment">“ Our guide, Sarah, was incredibly passionate and well-versed in the art world. She expertly provided insightful commentary on the works of Monet and other renowned artists.”</p>
+          <p class="review-name">Marie Johnson</p>
+          <p class="review-tour">Musée de l'Orangerie Tour</p>
+        </div>
+        <div class="review-img">
+          <img src="Img/People_Chilling.jpg" alt="">
+          <div class="review-bottom-circle"></div>
+        </div>
+      </div>
+    </div>
+    ...
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+
+
+
     <!--Footer-->
 
     <footer>
@@ -264,6 +314,9 @@
       </div>
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 
   </body>
 </html>
