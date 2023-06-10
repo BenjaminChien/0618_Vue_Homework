@@ -1,395 +1,482 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Tour List -Rooster Travel</title>
+    <title>Tour List -Rooster Travel</title>
 
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <input type="checkbox" id="menu-switch" />
+    <header>
+      <a href="index.html" class="logo">
+        <img src="Img/logo_svg.svg" alt="" />
+      </a>
+      <label for="menu-switch" class="hb">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <div class="nav-list">
+        <a href="tour_list.html">Book a tour</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </header>
 
-
-</head>
-<body>
-
-  <header>
-    <a href="index.html" class="logo">
-      <img src="Img/Logo.jpg" />
-    </a>
-    <div class="nav-list">
-      <a href="tour_list.html">Book a tour</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </header>
-
-  <div class="banner-area">
-    <div class="banner-container">
-      <img src="Img/banner.jpg" alt="">
-      <div class="banner-title">Paris</div>
-      <div class="banner-subtitle">Embrace the Magic of the City</div>
-      <div class="banner-description">"Step into the enchanting world of Paris, every moment is filled with magic. <br>
-      Let the City of Lights captivate your senses in a journey of wonder."</div>
-    </div>
-  </div>
-
-  
-  <div class="list-area">
-    <div class="list-container">
-      <h3 class="list-title">Top Seller</h3>
-      <p class="list-description">Experience the pinnacle of Parisian allure with our Top Seller collection.</p>
-      <div class="list-card-wrap">
-        <a href="tour_details.html" class="list-card">
-          <img src="Img/List_Effiel_Tower.jpg" alt="">
-          <div class="list-card-text">
-            <p class="avaliable-time">Available Daily</p>
-            <h4 class="card-title">Eiffel Tower Sunset Tour</h4>
-            <p class="card-description">Immerse yourself in the romantic ambiance of Paris as you witness a breathtaking sunset from the iconic Eiffel Tower.</p>
-            <div class="card-rating">
-              <div class="stars">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <p>(988)</p>
-              </div>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-          </div>
-        </a>
-
-        <a href="tour_details.html" class="list-card">
-          <img src="Img/List_Louvre_Museum.jpg" alt="">
-          <div class="list-card-text">
-            <p class="avaliable-time">Available Daily</p>
-            <h4 class="card-title">Louvre Museum Highlights Tour</h4>
-            <p class="card-description">Our knowledgeable guide will lead you to the museum's most iconic masterpieces, sharing fascinating stories.</p>
-            <div class="card-rating">
-              <div class="stars">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <p>(988)</p>
-              </div>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-          </div>
-        </a>
-
-        <a href="tour_details.html" class="list-card">
-          <img src="Img/List_Seine_Cruise.jpg" alt="">
-          <div class="list-card-text">
-            <p class="avaliable-time">Available Daily</p>
-            <h4 class="card-title">Seine River Dinner Cruise</h4>
-            <p class="card-description">Delight in gourmet cuisine, panoramic views of Paris's illuminated landmarks, and live entertainment.</p>
-            <div class="card-rating">
-              <div class="stars">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <p>(988)</p>
-              </div>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-          </div>
-        </a>
+    <div class="banner-area">
+      <div class="banner-container">
+        <div class="banner-title">
+          <h2>Paris</h2>
+          <h3>Embrace the Magic of the City</h3>
+        </div>
+        <div class="banner-description">
+          <h3>
+            "Step into the enchanting world of Paris, every moment is filled with
+            magic. <br />
+            Let the City of Lights captivate your senses in a journey of wonder."
+          </h3>
+        </div>
       </div>
     </div>
 
-    <div class="list-container">
-      <h3 class="list-title">Must-See Paris</h3>
-      <p class="list-description"> Discover the iconic landmarks and must-see attractions that define the essence of Paris.</p>
-      <div class="list-card-wrap">
-        <a href="tour_details.html" class="list-card">
-          <img src="Img/List_Château_de_Versailles.jpg" alt="">
-          <div class="list-card-text">
-            <p class="avaliable-time">Available Daily</p>
-            <h4 class="card-title">Château de Versailles Tour</h4>
-            <p class="card-description">Step into the opulence of the Palace of Versailles. Delve into the fascinating history of French royalty  and an architectural marvel. .</p>
-            <div class="card-rating">
-              <div class="stars">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <p>(988)</p>
+    <div class="list-area">
+      <div class="list-container">
+        <h3 class="list-title">Top Seller</h3>
+        <p class="list-description">
+          Experience the pinnacle of Parisian allure with our Top Seller
+          collection.
+        </p>
+        <div class="list-card-wrap">
+          <a href="tour_details.html" class="list-card">
+            <img src="Img/List_Effiel_Tower.jpg" alt="" />
+            <div class="list-card-text">
+              <p class="avaliable-time">Available Daily</p>
+              <h4 class="card-title">Eiffel Tower Sunset Tour</h4>
+              <p class="card-description">
+                Immerse yourself in the romantic ambiance of Paris as you
+                witness a breathtaking sunset from the iconic Eiffel Tower.
+              </p>
+              <div class="card-rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <p>(988)</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
               </div>
-              <i class="fa-solid fa-arrow-right"></i>
             </div>
-          </div>
-        </a>
+          </a>
 
-        <a href="tour_details.html" class="list-card">
-          <img src="Img/List_Montmartre_Artistic_Experience.jpg" alt="">
-          <div class="list-card-text">
-            <p class="avaliable-time">Available Daily</p>
-            <h4 class="card-title">Montmartre Artistic Experience</h4>
-            <p class="card-description">Wander through its narrow streets, and soak up the vibrant atmosphere that inspired renowned artists like Picasso and Van Gogh.
-            </p>
-            <div class="card-rating">
-              <div class="stars">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <p>(988)</p>
+          <a href="tour_details.html" class="list-card">
+            <img src="Img/List_Louvre_Museum.jpg" alt="" />
+            <div class="list-card-text">
+              <p class="avaliable-time">Available Daily</p>
+              <h4 class="card-title">Louvre Museum Highlights Tour</h4>
+              <p class="card-description">
+                Our knowledgeable guide will lead you to the museum's most
+                iconic masterpieces, sharing fascinating stories.
+              </p>
+              <div class="card-rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <p>(988)</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
               </div>
-              <i class="fa-solid fa-arrow-right"></i>
             </div>
-          </div>
-        </a>
+          </a>
 
-        <a href="tour_details.html" class="list-card">
-          <img src="Img/List_Sainte_Chapelle.png" alt="">
-          <div class="list-card-text">
-            <p class="avaliable-time">Available Daily</p>
-            <h4 class="card-title">Sainte-Chapelle and Notre-Dame Combo Tour</h4>
-            <p class="card-description">Admire the stunning stained glass windows of Sainte-Chapelle and explore the legendary Notre-Dame Cathedral.</p>
-            <div class="card-rating">
-              <div class="stars">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <p>(988)</p>
+          <a href="tour_details.html" class="list-card">
+            <img src="Img/List_Seine_Cruise.jpg" alt="" />
+            <div class="list-card-text">
+              <p class="avaliable-time">Available Daily</p>
+              <h4 class="card-title">Seine River Dinner Cruise</h4>
+              <p class="card-description">
+                Delight in gourmet cuisine, panoramic views of Paris's
+                illuminated landmarks, and live entertainment.
+              </p>
+              <div class="card-rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <p>(988)</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
               </div>
-              <i class="fa-solid fa-arrow-right"></i>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
-      <div class="list-card-wrap">
-        <a href="tour_details.html" class="list-card">
-          <img src="Img/List_Arc_de_Triomphe.jpg" alt="">
-          <div class="list-card-text">
-            <p class="avaliable-time">Available Daily</p>
-            <h4 class="card-title">Arc de Triomphe Rooftop View</h4>
-            <p class="card-description">Ascend to the top of the iconic Arc de Triomphe and be rewarded with breathtaking panoramic views of Paris.</p>
-            <div class="card-rating">
-              <div class="stars">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <p>(988)</p>
-              </div>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-          </div>
-        </a>
 
-        <a href="tour_details.html" class="list-card">
-          <img src="Img/List_Musee_d'Orsay.jpg" alt="">
-          <div class="list-card-text">
-            <p class="avaliable-time">Available Daily</p>
-            <h4 class="card-title">Musée d'Orsay Impressionist Collection</h4>
-            <p class="card-description">Explore the works of Monet, Renoir, Van Gogh, and more artworks in this stunning former railway station turned museum.</p>
-            <div class="card-rating">
-              <div class="stars">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <p>(988)</p>
+      <div class="list-container">
+        <h3 class="list-title">Must-See Paris</h3>
+        <p class="list-description">
+          Discover the iconic landmarks and must-see attractions that define the
+          essence of Paris.
+        </p>
+        <div class="list-card-wrap">
+          <a href="tour_details.html" class="list-card">
+            <img src="Img/List_Château_de_Versailles.jpg" alt="" />
+            <div class="list-card-text">
+              <p class="avaliable-time">Available Daily</p>
+              <h4 class="card-title">Château de Versailles Tour</h4>
+              <p class="card-description">
+                Step into the opulence of the Palace of Versailles. Delve into
+                the fascinating history of French royalty and an architectural
+                marvel. .
+              </p>
+              <div class="card-rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <p>(988)</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
               </div>
-              <i class="fa-solid fa-arrow-right"></i>
             </div>
-          </div>
-        </a>
+          </a>
 
-        <a href="tour_details.html" class="list-card">
-          <img src="Img/List_Moulin_Rouge.jpg" alt="">
-          <div class="list-card-text">
-            <p class="avaliable-time">Available Daily</p>
-            <h4 class="card-title">Moulin Rouge: The Spectacular Parisian Cabaret</h4>
-            <p class="card-description">Delight in an unforgettable evening of an electric atmosphere that embodies the essence of the city's vibrant nightlife.</p>
-            <div class="card-rating">
-              <div class="stars">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <p>(988)</p>
+          <a href="tour_details.html" class="list-card">
+            <img src="Img/List_Montmartre_Artistic_Experience.jpg" alt="" />
+            <div class="list-card-text">
+              <p class="avaliable-time">Available Daily</p>
+              <h4 class="card-title">Montmartre Artistic Experience</h4>
+              <p class="card-description">
+                Wander through its narrow streets, and soak up the vibrant
+                atmosphere that inspired renowned artists like Picasso and Van
+                Gogh.
+              </p>
+              <div class="card-rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <p>(988)</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
               </div>
-              <i class="fa-solid fa-arrow-right"></i>
             </div>
-          </div>
-        </a>
+          </a>
+
+          <a href="tour_details.html" class="list-card">
+            <img src="Img/List_Sainte_Chapelle.png" alt="" />
+            <div class="list-card-text">
+              <p class="avaliable-time">Available Daily</p>
+              <h4 class="card-title">
+                Sainte-Chapelle and Notre-Dame Combo Tour
+              </h4>
+              <p class="card-description">
+                Admire the stunning stained glass windows of Sainte-Chapelle and
+                explore the legendary Notre-Dame Cathedral.
+              </p>
+              <div class="card-rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <p>(988)</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="list-card-wrap">
+          <a href="tour_details.html" class="list-card">
+            <img src="Img/List_Arc_de_Triomphe.jpg" alt="" />
+            <div class="list-card-text">
+              <p class="avaliable-time">Available Daily</p>
+              <h4 class="card-title">Arc de Triomphe Rooftop View</h4>
+              <p class="card-description">
+                Ascend to the top of the iconic Arc de Triomphe and be rewarded
+                with breathtaking panoramic views of Paris.
+              </p>
+              <div class="card-rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <p>(988)</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+
+          <a href="tour_details.html" class="list-card">
+            <img src="Img/List_Musee_d'Orsay.jpg" alt="" />
+            <div class="list-card-text">
+              <p class="avaliable-time">Available Daily</p>
+              <h4 class="card-title">Musée d'Orsay Impressionist Collection</h4>
+              <p class="card-description">
+                Explore the works of Monet, Renoir, Van Gogh, and more artworks
+                in this stunning former railway station turned museum.
+              </p>
+              <div class="card-rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <p>(988)</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+
+          <a href="tour_details.html" class="list-card">
+            <img src="Img/List_Moulin_Rouge.jpg" alt="" />
+            <div class="list-card-text">
+              <p class="avaliable-time">Available Daily</p>
+              <h4 class="card-title">
+                Moulin Rouge: The Spectacular Parisian Cabaret
+              </h4>
+              <p class="card-description">
+                Delight in an unforgettable evening of an electric atmosphere
+                that embodies the essence of the city's vibrant nightlife.
+              </p>
+              <div class="card-rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <p>(988)</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="list-container">
+        <h3 class="list-title">Hidden Gems of Paris</h3>
+        <p class="list-description">
+          Uncover the lesser-known treasures of Paris with our Hidden Gems tour.
+        </p>
+        <div class="list-card-wrap">
+          <a href="tour_details.html" class="list-card">
+            <img src="Img/List_ Hôtel_des_Invalides.jpg" alt="" />
+            <div class="list-card-text">
+              <p class="avaliable-time">Available Daily</p>
+              <h4 class="card-title">
+                Legends of Valor: Hôtel des Invalides Historical Marvel
+              </h4>
+              <p class="card-description">
+                Marvel at the grandeur of its architecture, visit the
+                awe-inspiring Musée de l'Armée, and stand in awe of the iconic
+                golden dome.
+              </p>
+              <div class="card-rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <p>(988)</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+
+          <a href="tour_details.html" class="list-card">
+            <img src="Img/List_Garden_Luxembourg.jpg" alt="" />
+            <div class="list-card-text">
+              <p class="avaliable-time">Available Daily</p>
+              <h4 class="card-title">
+                Garden Serenity: Luxembourg's Tranquil Escape
+              </h4>
+              <p class="card-description">
+                Delight in the meticulously landscaped gardens, admire the
+                elegant statues and fountains, and bask in the peaceful
+                atmosphere.
+              </p>
+              <div class="card-rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <p>(988)</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+
+          <a href="tour_details.html" class="list-card">
+            <img src="Img/List_Le_Marais.jpg" alt="" />
+            <div class="list-card-text">
+              <p class="avaliable-time">Available Daily</p>
+              <h4 class="card-title">
+                Timeless Treasures: Le Marais Cultural Discovery
+              </h4>
+              <p class="card-description">
+                Explore its medieval alleys, where every corner reveals hidden
+                courtyards and beckons you to explore further.
+              </p>
+              <div class="card-rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <p>(988)</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="list-card-wrap">
+          <a href="tour_details.html" class="list-card">
+            <img src="Img/List_La_Maison_Rose.jpg" alt="" />
+            <div class="list-card-text">
+              <p class="avaliable-time">Available Daily</p>
+              <h4 class="card-title">La Maison Rose</h4>
+              <p class="card-description">
+                Discover the colorful La Maison Rose, indulging in delectable
+                treats, soaking up the bohemian atmosphere of this artistic
+                enclave.
+              </p>
+              <div class="card-rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <p>(988)</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+
+          <a href="tour_details.html" class="list-card">
+            <img src="Img/List_Pantheon.jpg" alt="" />
+            <div class="list-card-text">
+              <p class="avaliable-time">Available Daily</p>
+              <h4 class="card-title">Pantheon: Where History Lives</h4>
+              <p class="card-description">
+                Discover the final resting place of prominent figures, and
+                admire the impressive neoclassical architecture of this iconic
+                monument.
+              </p>
+              <div class="card-rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <p>(988)</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+
+          <a href="tour_details.html" class="list-card">
+            <img src="Img/List_Cimetière_du_Père_Lachaise.jpg" alt="" />
+            <div class="list-card-text">
+              <p class="avaliable-time">Available Daily</p>
+              <h4 class="card-title">Cimetière du Père Lachaise</h4>
+              <p class="card-description">
+                Lose yourself in the maze of ornate tombs, overgrown ivy, and
+                poignant memorials that evoke a sense of mystery and reflection.
+              </p>
+              <div class="card-rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <p>(988)</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
 
-    <div class="list-container">
-      <h3 class="list-title">Hidden Gems of Paris</h3>
-      <p class="list-description">Uncover the lesser-known treasures of Paris with our Hidden Gems tour.</p>
-      <div class="list-card-wrap">
-        <a href="tour_details.html" class="list-card">
-          <img src="Img/List_ Hôtel_des_Invalides.jpg" alt="">
-          <div class="list-card-text">
-            <p class="avaliable-time">Available Daily</p>
-            <h4 class="card-title">Legends of Valor: Hôtel des Invalides Historical Marvel</h4>
-            <p class="card-description">Marvel at the grandeur of its architecture, visit the awe-inspiring Musée de l'Armée, and stand in awe of the iconic golden dome.</p>
-            <div class="card-rating">
-              <div class="stars">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <p>(988)</p>
-              </div>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
+    <footer>
+      <div class="contact-container">
+        <div class="contact-info">
+          <p class="contact-title">Contact Information:</p>
+          <div class="contact-item">
+            Address: 123 Paris Street, Paris, France
           </div>
-        </a>
-
-        <a href="tour_details.html" class="list-card">
-          <img src="Img/List_Garden_Luxembourg.jpg" alt="">
-          <div class="list-card-text">
-            <p class="avaliable-time">Available Daily</p>
-            <h4 class="card-title">Garden Serenity: Luxembourg's Tranquil Escape</h4>
-            <p class="card-description">Delight in the meticulously landscaped gardens, admire the elegant statues and fountains, and bask in the peaceful atmosphere.</p>
-            <div class="card-rating">
-              <div class="stars">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <p>(988)</p>
-              </div>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
+          <div class="contact-item">Phone: +33 123 456 789</div>
+          <div class="contact-item">Email: info@roostertravel.com</div>
+        </div>
+        <div class="contact-links">
+          <p class="contact-title">Links:</p>
+          <a href="index.html">Home</a>
+          <a href="tour_list.html">Tours</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="contact-social-media">
+          <div class="media-icons">
+            <p class="contact-title">Social Media:</p>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
           </div>
-        </a>
-
-        <a href="tour_details.html" class="list-card">
-          <img src="Img/List_Le_Marais.jpg" alt="">
-          <div class="list-card-text">
-            <p class="avaliable-time">Available Daily</p>
-            <h4 class="card-title">Timeless Treasures: Le Marais Cultural Discovery</h4>
-            <p class="card-description">Explore its medieval alleys, where every corner reveals hidden courtyards and beckons you to explore further.</p>
-            <div class="card-rating">
-              <div class="stars">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <p>(988)</p>
-              </div>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-          </div>
-        </a>
+        </div>
       </div>
-      <div class="list-card-wrap">
-        <a href="tour_details.html" class="list-card">
-          <img src="Img/List_La_Maison_Rose.jpg" alt="">
-          <div class="list-card-text">
-            <p class="avaliable-time">Available Daily</p>
-            <h4 class="card-title">La Maison Rose</h4>
-            <p class="card-description">Discover the colorful La Maison Rose, indulging in delectable treats, soaking up the bohemian atmosphere of this artistic enclave.</p>
-            <div class="card-rating">
-              <div class="stars">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <p>(988)</p>
-              </div>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-          </div>
-        </a>
-
-        <a href="tour_details.html" class="list-card">
-          <img src="Img/List_Pantheon.jpg" alt="">
-          <div class="list-card-text">
-            <p class="avaliable-time">Available Daily</p>
-            <h4 class="card-title">Pantheon: Where History Lives</h4>
-            <p class="card-description">Discover the final resting place of prominent figures, and admire the impressive neoclassical architecture of this iconic monument.</p>
-            <div class="card-rating">
-              <div class="stars">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <p>(988)</p>
-              </div>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-          </div>
-        </a>
-
-        <a href="tour_details.html" class="list-card">
-          <img src="Img/List_Cimetière_du_Père_Lachaise.jpg" alt="">
-          <div class="list-card-text">
-            <p class="avaliable-time">Available Daily</p>
-            <h4 class="card-title">Cimetière du Père Lachaise</h4>
-            <p class="card-description">Lose yourself in the maze of ornate tombs, overgrown ivy, and poignant memorials that evoke a sense of mystery and reflection.</p>
-            <div class="card-rating">
-              <div class="stars">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <p>(988)</p>
-              </div>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-  
-  <footer>
-    <div class="contact-container">
-      <div class="contact-info">
-      <p class="contact-title">Contact Information:</p> 
-      <div class="contact-item">Address: 123 Paris Street, Paris, France</div>
-      <div class="contact-item">Phone: +33 123 456 789</div>
-      <div class="contact-item">Email: info@roostertravel.com</div>
-    </div>
-    <div class="contact-links">
-      <p class="contact-title">Links:</p>
-      <a href="index.html">Home</a>
-      <a href="tour_list.html">Tours</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="contact-social-media">
-      <div class="media-icons">
-        <p class="contact-title">Social Media:</p>
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-      </div>
-    </div>
-    </div>
-  </footer>
-
-</body>
+    </footer>
+  </body>
 </html>

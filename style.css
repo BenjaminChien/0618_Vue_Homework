@@ -21,6 +21,42 @@ h2 {
   font-size: 20px;
   line-height: 130%;
   font-weight: 400;
+  letter-spacing: 0.005em;
+}
+
+h3 {
+  font-family: "EB Garamond", serif;
+  font-size: 18px;
+  line-height: 130%;
+  font-weight: 400;
+  letter-spacing: 0.005em;
+}
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 180%;
+  letter-spacing: 0.005em;
+}
+
+h5 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 180%;
+  letter-spacing: 0.005em;
+}
+
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 180%;
+  letter-spacing: 0.005em;
 }
 
 p {
@@ -81,6 +117,14 @@ button:hover {
     font-size: 30px;
   }
 
+  h3 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
   p {
     font-size: 12px;
   }
@@ -101,6 +145,15 @@ button:hover {
   h2 {
     font-size: 36px;
   }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
 
   p {
     font-size: 14px;
@@ -124,6 +177,14 @@ button:hover {
     font-size: 42px;
   }
 
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
   p {
     font-size: 16px;
   }
@@ -145,6 +206,22 @@ button:hover {
     font-size: 56px;
   }
 
+  h3 {
+    font-size: 48px;
+  }
+
+  h4 {
+    font-size: 32px;
+  }
+
+  h5 {
+    font-size: 24px;
+  }
+
+  h6 {
+    font-size: 20px;
+  }
+  
   p {
     font-size: 20px;
   }
@@ -156,42 +233,6 @@ button:hover {
   }
 }
 
-/* computer */
-@media screen and (min-width: 414px) {
-  h3 {
-    font-size: 48px;
-    font-family: "EB Garamond", serif;
-    line-height: 63px;
-    font-weight: 400;
-  }
-
-  h4 {
-    font-family: "Montserrat", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 180%;
-    letter-spacing: 0.005em;
-  }
-
-  h5 {
-    font-family: "Montserrat", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 180%;
-    letter-spacing: 0.005em;
-  }
-
-  h6 {
-    font-family: "Montserrat", sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 180%;
-    letter-spacing: 0.005em;
-  }
-}
 /*header*/
 
 header {
@@ -208,8 +249,8 @@ header {
 
 header .logo {
   /* width: 334px; */
-  margin: 0.5rem;
-  width: 60%;
+  margin: 0 10px;
+  width: 200px;
   margin-right: auto;
 }
 
@@ -295,9 +336,20 @@ header a {
 }
 
 @media screen and (min-width: 768px) {
+  header a {
+    padding: 20px;
+    font-size: 20px;
+  }
+
   header .logo {
     width: 334px;
-    margin: 28px;
+    margin: 10px 0px;
+    margin-left: 20px;
+    padding-right: 0px;
+  }
+
+  .nav-list a:nth-child(1){
+    padding-left: 0px;
   }
 
   header .nav-list {
@@ -1179,7 +1231,6 @@ header a {
   }
   
   .review-text {
-    padding: 0 5%;
     width: 100%;
   }
   
@@ -1215,9 +1266,6 @@ header a {
     font-weight: 600;
     padding-top: 13px;
   }
-
-
-
 
 @media screen and (min-width: 768px){
   .homepage-review {
@@ -1409,51 +1457,100 @@ footer {
 /*tour_list*/
 .banner-area {
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
-.banner-container {
-  position: relative;
-}
-
-.banner-container img {
+.banner-title{
   width: 100%;
+  background-image: url(Img/banner.jpg);
+  background-position: center;  
 }
 
-.banner-title {
-  position: absolute;
-  top: 152px;
-  left: 845px;
+.banner-title h2{
+  margin: 0 auto;
   color: #fff;
-  font-size: 128px;
-  font-family: "EB Garamond", serif;
-  width: 697px;
-}
-
-.banner-subtitle {
-  position: absolute;
-  top: 328px;
-  left: 740px;
-  font-style: italic;
-  font-family: "EB Garamond";
-  font-size: 36px;
-  line-height: 47px;
-  font-weight: 400;
-  color: #fff;
-}
-
-.banner-description {
-  font-family: "EB Garamond";
-  font-style: italic;
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 52px;
   text-align: center;
-  padding-top: 39px;
-  padding-bottom: 48px;
+  font-size: 36px;
+  padding-top: 40px;
 }
 
+.banner-title h3{
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+  font-size: 16px;
+  padding-bottom: 50px;
+}
+
+.banner-description h3{
+  font-style: italic;
+  text-align: center;
+  margin: 0 auto;
+  width: 290px;
+  font-size: 14px;
+  padding: 20px 5%;
+}
+
+@media screen and (min-width: 414px){
+  .banner-title h2{
+    font-size: 50px;
+    padding-top: 60px;
+  }
+  
+  .banner-title h3{
+    font-size: 18px;
+    padding-bottom: 100px;
+  }
+  
+  .banner-description h3{
+    width: 400px;
+
+    font-size: 16px;
+    line-height: 27px;
+    padding: 20px 0px;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .banner-title h2{
+    font-size: 80px;
+    padding-top: 100px;
+  }
+  
+  .banner-title h3{
+    font-size: 26px;
+    padding-bottom: 160px;
+  }
+  
+  .banner-description h3{
+    width: 100%;
+    font-size: 26px;
+    line-height: 39px;
+    padding: 30px 0px;
+  }
+}
+
+
+@media screen and (min-width: 1200px){
+
+  .banner-title h2{
+    font-size: 128px;
+    padding-top: 152px;
+  }
+  
+  .banner-title h3{
+    font-size: 36px;
+    padding-bottom: 300px;
+  }
+  
+  .banner-description h3{
+    font-size: 40px;
+    line-height: 52px;
+    padding: 40px 0px;
+  }
+}
+
+
+/* tour_list_list */
 .list-area {
   padding-bottom: 50px;
 }
@@ -1468,31 +1565,30 @@ footer {
 }
 
 .list-title {
-  padding-top: 50px;
-  padding-left: 60px;
+  padding-top: 20px;
+  padding-left: 10%;
 }
 
-.list-card-wrap {
-  display: flex;
+.list-description {
+  padding: 15px 10%;
+  flex-grow: 1;
 }
+
 
 .list-card-wrap img {
   width: 100%;
 }
 
 .list-card {
-  width: 33.333333%;
+  width: 80%;
   padding: 31px 17px;
-  border-top: #d9d9d9 1px solid;
-  border-left: #d9d9d9 1px solid;
-  border-bottom: #d9d9d9 1px solid;
+  border: #d9d9d9 1px solid;
+  border-right: none;
+  border-left: none;
   display: flex;
   flex-direction: column;
   align-content: end;
-}
-
-.list-description {
-  padding: 25px 0px 25px 60px;
+  margin: 0 auto;
 }
 
 .list-card-text {
@@ -1502,20 +1598,24 @@ footer {
   flex-direction: column;
 }
 
+.card-description{
+  flex-grow: 1;
+}
+
 .avaliable-time {
   text-align: right;
   padding: 0px 20px;
 }
 
 .card-title {
-  padding-bottom: 50px;
+  padding-bottom: 15px;
   flex-grow: 1;
 }
 
 .card-rating {
   display: flex;
   align-items: center;
-  padding-top: 30px;
+  padding-top: 15px;
 }
 
 .card-rating {
@@ -1524,12 +1624,11 @@ footer {
 }
 
 .card-rating span {
-  font-size: 30px;
+  font-size: 15px;
 }
 
 .card-rating p {
   display: inline;
-  padding-left: 20px;
 }
 
 .card-rating i {
@@ -1548,7 +1647,7 @@ footer {
 
 @keyframes arrow-go-right {
   0% {
-    margin-right: 20px;
+    margin-right: 2%;
   }
   100% {
     margin-right: 0px;
@@ -1562,18 +1661,93 @@ footer {
   animation-iteration-count: infinite;
 }
 
+
+@media screen and (min-width: 768px){
+
+.list-title {
+  padding-top: 50px;
+  padding-left: 60px;
+}
+
+.list-card-wrap {
+  display: flex;
+}
+
+.list-description {
+  padding: 25px 0px 25px 60px;
+}
+
+.list-card {
+  width: 33.333333%;
+  padding: 31px 17px;
+  border-right: none;
+  border-left: #d9d9d9 1px solid;
+}
+
+.card-title {
+  padding-bottom: 50px;
+  flex-grow: 1;
+}
+
+.card-rating span {
+  font-size: 15px;
+}
+
+.card-rating i {
+  display: none;
+  font-size: 15px;
+  color: #222;
+}
+
+.list-card:hover {
+  background-color: #fefcf9;
+  box-shadow: 0px 10px 24px -5px rgba(0, 0, 0, 0.68);
+  -webkit-box-shadow: 0px 10px 24px -5px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: 0px 10px 24px -5px rgba(0, 0, 0, 0.68);
+  transition: box-shadow 0.4s;
+}
+
+@keyframes arrow-go-right {
+  0% {
+    margin-right: 2%;
+  }
+  100% {
+    margin-right: 0px;
+  }
+}
+
+.list-card:hover .card-rating i {
+  display: block;
+  animation-name: arrow-go-right;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+}
+
+@media screen and (min-width: 1200px){
+  .card-rating i {
+    font-size: 30px;
+  }
+
+  .card-rating span {
+    font-size: 30px;
+  }
+}
+
+
 /*tour_details */
 
 .details-title {
   font-family: "EB Garamond";
   font-style: normal;
   font-weight: 400;
-  font-size: 80px;
-  line-height: 104px;
+  line-height: 125%;
   text-align: center;
   width: 100%;
   text-justify: center;
-  padding: 91px 0px;
+  font-size: 30px;
+  padding: 35px 0px;
 }
 
 .details-img-area {
@@ -1802,6 +1976,23 @@ footer {
   font-size: 16px;
   letter-spacing: 0.005em;
 }
+
+@media screen and (min-width: 768px){
+  .details-title {
+    font-size: 60px;
+    padding: 65px 0px;
+}
+}
+
+@media screen and (min-width: 1200px){
+  .details-title {
+    font-size: 80px;
+    padding: 91px 0px;
+}
+}
+
+
+/* about */
 
 .about-landing-area {
   display: flex;
