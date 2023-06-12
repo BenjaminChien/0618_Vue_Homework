@@ -59,6 +59,10 @@ h6 {
   letter-spacing: 0.005em;
 }
 
+input, select {
+  font-size: 16px;
+}
+
 p {
   font-size: 12px;
   font-family: "Montserrat", sans-serif;
@@ -66,6 +70,10 @@ p {
   font-weight: 400;
   line-height: 180%;
   letter-spacing: 0.005em;
+}
+
+li, span, label{
+  font-size: 12px;
 }
 
 button {
@@ -95,10 +103,6 @@ button:hover {
     font-size: 20px;
   }
 
-  p {
-    font-size: 12px;
-  }
-
   button {
     width: 105px;
     height: 30px;
@@ -123,6 +127,10 @@ button:hover {
 
   h4 {
     font-size: 18px;
+  }
+
+  h5, input, select{
+    font-size: 16px;
   }
 
   p {
@@ -154,8 +162,15 @@ button:hover {
     font-size: 20px;
   }
 
+  h5, input, select{
+    font-size: 18px;
+  }
 
   p {
+    font-size: 14px;
+  }
+
+  li,span, label{
     font-size: 14px;
   }
 
@@ -185,7 +200,15 @@ button:hover {
     font-size: 24px;
   }
 
+  h5, input, select{
+    font-size: 20px;
+  }
+
   p {
+    font-size: 16px;
+  }
+
+  li, span, label{
     font-size: 16px;
   }
 
@@ -214,7 +237,7 @@ button:hover {
     font-size: 32px;
   }
 
-  h5 {
+  h5, input, select{
     font-size: 24px;
   }
 
@@ -223,6 +246,10 @@ button:hover {
   }
   
   p {
+    font-size: 20px;
+  }
+
+  li, span, label{
     font-size: 20px;
   }
 
@@ -1755,27 +1782,55 @@ footer {
   display: flex;
   justify-content: center;
   background-color: #244974;
-  padding: 55px 0px;
+  padding: 20px 5%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .details-img-area .left-arrow {
   position: absolute;
   top: 400px;
   left: 60px;
+  display: none;
 }
 
 .details-img-area .right-arrow {
   position: absolute;
   top: 400px;
   right: 60px;
+  display: none;
 }
 
 .details-img-list {
-  display: grid;
-  grid-template-columns: 1029px 491px;
-  grid-template-rows: 360px 360px;
-  gap: 19px;
+  width: 1540px;
+  display: block;
+  grid-template-columns: 1029fr 491fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
 }
+
+.details-img-list img{
+  width: 100%;
+}
+
+.details-img-list img:not(:first-child){
+  display: none;
+}
+
+@media screen and (min-width: 1024px){
+  .details-img-list img:not(:first-child){
+    display: block;
+  }
+
+  .details-img-list{
+    display: grid;
+  }
+
+  .details-img-area {
+    padding: 40px 5%;
+  }
+}
+
 
 .details-main-img {
   grid-column-start: 1;
@@ -1799,25 +1854,70 @@ footer {
 }
 
 .details-area {
-  display: flex;
   justify-content: center;
-  margin-top: 56px;
+  margin-top: 20px;
   padding: 20px 0px;
-}
+} 
 
 .details-text-area {
-  width: 600px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .details-calendar {
-  width: 600px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.details-text-area h3{
+  display: none;
+}
+
+@media screen and (min-width: 768px){
+  .details-area {
+    display: flex;
+    width:650px;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .details-text-area {
+    width: 50%;
+  }
+
+  .details-text-area h3{
+    display: block;
+  }
+
+}
+
+@media screen and (min-width: 1024px){
+  .details-area {
+    width: 850px;
+    margin: auto;
+    margin-top: 56px;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .details-area {
+    width: 1050px;
+    margin-top: 56px;
+  }
+
+}
+
+@media screen and (min-width: 1600px){
+  .details-area {
+    width: 1400px;
+    margin: auto;
+    margin-top: 56px;
+  }
 }
 
 .notices-list li {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
   line-height: 180%;
   letter-spacing: 0.005em;
   position: relative;
@@ -1825,22 +1925,16 @@ footer {
   padding: 10px 0px;
 }
 
-.details-subtitle {
-  font-family: "EB Garamond";
+.details-subtitle{
+  padding-top: 20px;
+  font-family: "EB Garamond", serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 40px;
-  line-height: 52px;
-  padding-top: 40px;
-  padding-bottom: 10px;
+  padding-bottom: 0;
 }
 
 .details-text-area h3 {
   padding-bottom: 30px;
-}
-
-.details-text-area h6 {
-  padding-top: 30px;
 }
 
 .included-list p {
@@ -1854,29 +1948,27 @@ footer {
   padding-right: 10px;
 }
 
+.details-text-area h6{
+  padding-top: 10px;
+}
+
+/* calender */
 .calender-container {
-  width: 600px;
-  position: relative;
-  left: 50px;
+  width: 100%;
   padding: 20px;
   border: 1px solid #d9d9d9;
   border-radius: 7px;
+  box-sizing: border-box;
 }
 
 .calender-container .book-button {
-  display: block;
-  width: 80%;
-  margin: 15px auto;
-  background: #cdab5e;
-  border-radius: 11px;
-  box-sizing: border-box;
-  text-decoration: none;
-  line-height: 58px;
   text-align: center;
-  font-size: 24px;
-  font-weight: 500;
-  font-family: "Montserrat";
-  color: #000000;
+  display: block;
+  padding-top: 15px;
+}
+
+.book-button button{
+  width: 70%;
 }
 
 .calender-form-title {
@@ -1899,19 +1991,16 @@ footer {
   color: #cdab5e;
   font-size: 32px;
   width: 32px;
-  height: 32px;
   padding: 20px;
 }
 
 .calender-container select {
-  font-size: 24px;
   padding-left: 2%;
-  width: 479px;
+  width: 75%;
 }
 
 .calender-container .row input {
-  font-size: 24px;
-  width: 479px;
+  width: 75%;
 }
 
 .cancel-policy-row {
@@ -1930,24 +2019,65 @@ footer {
 }
 
 .details-review-container {
-  width: 1200px;
+  width: 80%;
+}
+
+
+@media screen and (min-width: 768px){
+  .details-calendar {
+    width: 50%;
+    margin: 0;
+  }
+
+  .calender-container {
+    margin-left: 10%;
+  }
+    .details-review-container {
+      width:650px;
+    }
+
+    .details-review-comment{
+      padding-top: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+  .details-review-container {
+    width: 850px;
+  }
+
+  .details-review-comment{
+    padding-top: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .details-review-container {
+    width: 1050px;
+  }
+
+}
+
+@media screen and (min-width: 1600px){
+  .details-review-container {
+    width: 1400px;
+  }
 }
 
 .details-review-title h3 {
   display: inline;
-  padding-right: 20px;
-}
-
-.details-review-title span {
-  font-size: 20px;
   padding-right: 5px;
 }
 
+.details-review-title span {
+  padding-right: 0.1%;
+}
+
 .details-review-lists {
-  margin-top: 34px;
+  margin-top: 20px;
   margin-bottom: 124px;
   border: 4px #244974 solid;
-  padding: 45px;
+  padding:  10px 20px;
 }
 
 .details-review-area .comment-info {
@@ -1955,17 +2085,17 @@ footer {
   justify-content: end;
   align-items: center;
   padding: 20px 0px;
+  flex-wrap: wrap;
 }
 
 .comment-info span {
-  padding: 3px;
+  padding: 0.2%;
 }
 
 .details-review-name {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
   padding: 0px 10px;
 }
 
@@ -1973,7 +2103,6 @@ footer {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
   letter-spacing: 0.005em;
 }
 
@@ -1982,12 +2111,55 @@ footer {
     font-size: 60px;
     padding: 65px 0px;
 }
+
+.calender-container {
+  display: block;
+}
+
+.calender-container i {
+  font-size: 24px;
+}
+
+.calender-container select {
+  font-size: 18px;
+}
+
+.calender-container .row input {
+  font-size: 18px;
+}
+
+.calender-container .row {
+  padding: 10px 0px;
+}
+
+.details-review-lists{
+  margin-top: 34px;
+  padding: 10px 45px;
+}
+
+.details-review-title h3 {
+  display: inline;
+  padding-right: 20px;
+}
+
 }
 
 @media screen and (min-width: 1200px){
   .details-title {
     font-size: 80px;
     padding: 91px 0px;
+}
+
+.calender-container i {
+  font-size: 32px;
+}
+
+.calender-container select {
+  font-size: 24px;
+}
+
+.calender-container .row input {
+  font-size: 24px;
 }
 }
 
@@ -2137,7 +2309,6 @@ footer {
   display: inline-block;
   width: 100px;
   font-family: "Montserrat";
-  font-size: 20px;
   font-weight: 400;
   line-height: 36px;
   letter-spacing: 0.005em;
@@ -2150,7 +2321,6 @@ footer {
   height: 47px;
   border-radius: 7px;
   border: 1px solid #d9d9d9;
-  font-size: 20px;
   padding: 0px 5px;
   margin: 5px;
   font-family: "Montserrat", sans-serif;
@@ -2239,7 +2409,7 @@ footer {
 
 .progress-bar {
   width: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   padding: 60px 30px;
@@ -2306,6 +2476,7 @@ footer {
   line-height: 180%;
   text-align: center;
   letter-spacing: 0.005em;
+  flex-wrap: wrap;
 }
 
 .form-group {
@@ -2332,12 +2503,31 @@ footer {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 12px;
   line-height: 180%;
   letter-spacing: 0.005em;
   color: #000000;
   resize: none;
-  margin: 10px 20px;
+  padding: 10px 5px;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 1024px){
+  #additional-info {
+  font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1280px){
+  #additional-info {
+  font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1600px){
+  #additional-info {
+  font-size: 20px;
+  }
 }
 
 .customer-checkbox {
@@ -2387,11 +2577,14 @@ footer {
   color: #4d4d4d;
 }
 
+
 .cart-summary-container {
   border: 1px solid #000000;
   border-radius: 7px;
   padding: 15px 25px;
   margin-left: 5%;
+  min-width: 300px;
+  display: none;
 }
 
 .cart-summary-items {
@@ -2444,20 +2637,23 @@ footer {
 }
 
 /* payment */
-.card-number {
-  width: 60%;
+
+@media screen and (min-width: 1200px){
+  .card-number {
+    width: 60%;
+  }
+  
+  .expire-date {
+    width: 30%;
+  }
+  
+  .cvc {
+    width: 10%;
+  }
 }
 
 #card-number {
   font-size: 24px;
-}
-
-.expire-date {
-  width: 30%;
-}
-
-.cvc {
-  width: 10%;
 }
 
 #cvc {
@@ -2470,4 +2666,19 @@ footer {
 
 .swiper-scrollbar {
   display: none;
+}
+
+
+@media screen and (min-width: 1280px){
+  .info-container .row {
+  flex-wrap: nowrap;
+  }
+
+  .cart-summary-container{
+    display: block;
+  }
+
+  .progress-bar{
+    display: flex;
+  }
 }
