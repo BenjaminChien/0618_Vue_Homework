@@ -2172,9 +2172,13 @@ footer {
 }
 
 .about-title-container h2 {
-  padding: 30px 340px;
+  padding: 1.5% 18%;
   width: 100%;
   box-sizing: border-box;
+}
+
+.about-landing-img img{
+  width: 100%;
 }
 
 .who-area {
@@ -2183,18 +2187,25 @@ footer {
 }
 
 .who-container {
-  padding: 80px 360px;
-  width: 1200px;
+  padding: 1.5% 18%;
+  width: 100%;
 }
 
 .what-area {
-  display: flex;
+  display: none;
   justify-content: center;
   background-color: #244974;
 }
+
+@media screen and (min-width: 1900px){
+  .what-area {
+    display: flex;
+  }
+}
+
 .what-container {
-  width: 1200px;
-  padding-bottom: 93px;
+  padding: 1.5% 18%;
+  width: 100%;
 }
 
 .what-container h3 {
@@ -2258,9 +2269,17 @@ footer {
 }
 
 .why-container {
+  display: none;
   width: 1200px;
   padding-top: 96px;
 }
+
+@media screen and (min-width: 1900px){
+  .why-container {
+    display: block;
+  }
+}
+
 
 .why-container h3 {
   padding-bottom: 20px;
@@ -2273,6 +2292,12 @@ footer {
   gap: 5px;
 }
 
+.why-img{
+  width: 100%;
+}
+
+
+
 .why-container p {
   padding: 53px 0px 81px 0px;
 }
@@ -2284,40 +2309,91 @@ footer {
 }
 
 .contact-us-container {
-  width: 1200px;
   padding-top: 30px;
-  padding-bottom: 120px;
+  padding-bottom: 30px;
 }
 
 .contact-us-wrap {
+  width: 300px;
   display: flex;
+  flex-wrap: wrap-reverse;
+  gap: 7%;
 }
 
-.contact-us-form {
-  width: 600px;
+.contact-us-form{
+  width: 100%;
+}
+
+.contact-us-info {
+  background-color: #244974;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px){
+  .contact-us-wrap {
+    flex-wrap: nowrap;
+    width: 700px;
+  }
+
+  .contact-us-form,.contact-us-info {
+    width: 50%;
+  }
+  .contact-us-container {
+    padding-bottom: 70px;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .contact-us-wrap {
+    width: 800px;
+  }
+  .contact-us-container {
+    padding-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .contact-us-wrap {
+    width: 1000px;
+  }
+  .contact-us-container {
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (min-width: 1600px){
+  .contact-us-wrap {
+    width: 1200px;
+  }
+  .contact-us-container {
+    padding-bottom: 120px;
+  }
 }
 
 .contact-us-container h2 {
-  padding-bottom: 59px;
+  line-height: 200%;
 }
 
 .contact-us-form p {
-  padding-bottom: 89px;
+  padding: 20px 0px;
 }
 
 .contact-us-form label {
   display: inline-block;
-  width: 100px;
+  width: 20%;
   font-family: "Montserrat";
   font-weight: 400;
   line-height: 36px;
   letter-spacing: 0.005em;
   text-align: left;
-  padding-bottom: 46px;
+  padding-bottom: 7%;
 }
 
 .contact-us-form input {
-  width: 421px;
+  width: 70%;
   height: 47px;
   border-radius: 7px;
   border: 1px solid #d9d9d9;
@@ -2331,7 +2407,7 @@ footer {
 }
 
 #cmessage {
-  width: 73%;
+  width: 70%;
   overflow-wrap: wrap;
   font-size: 20px;
   border-radius: 7px;
@@ -2342,20 +2418,29 @@ footer {
 }
 
 .contact-us-form button {
-  margin: 44px 25px 20px 170px;
+  margin: 20px auto;
+  display: block;
 }
 
-.contact-us-info {
-  background-color: #244974;
-  width: 600px;
-  margin-left: 60px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
+
+
+@media screen and (min-width: 768px){
+  .contact-us-form button {
+    margin: 30px auto;
+  }
 }
+
+@media screen and (min-width: 1200px){
+  .contact-us-form button {
+    margin: 44px auto;
+  }
+}
+
 
 .contact-us-info h3 {
-  padding: 60px 76px 0px 76px;
+  width: 70%;
+  margin: 0px auto;
+  line-height: 250%;
   color: #fff;
 }
 
@@ -2364,17 +2449,44 @@ footer {
 }
 
 .contact-us-icon {
-  padding: 45px 33px;
+  padding: 10px 17px;
+  font-size: 20px;
   display: inline-block;
-  font-size: 47px;
+}
+
+@media screen and (min-width: 768px){
+  .contact-us-icon {
+    padding: 20px 14px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .contact-us-icon {
+    padding: 20px 14px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .contact-us-icon {
+    padding: 30px 20px;
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1600px){
+  .contact-us-icon {
+    padding: 45px 33px;
+    font-size: 47px;
+  }
 }
 
 .contact-us-item {
   color: #fff;
-  font-size: 20px;
+  font-size: 12px;
   padding-left: 45px;
   font-family: "Montserrat", sans-serif;
-  font-size: 20px;
   font-weight: 400;
   line-height: 36px;
   letter-spacing: 0.005em;
@@ -2382,14 +2494,63 @@ footer {
   vertical-align: center;
 }
 
+@media screen and (min-width: 768px){
+  .contact-us-item {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .contact-us-item {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .contact-us-item {
+    font-size: 20px;
+  }
+}
+
 .top-square {
-  width: 61px;
-  height: 61px;
+  width: 40px;
+  height: 40px;
+  top: -16px;
+  right: -16px;
   background-color: #cdab5e;
   position: absolute;
-  top: -29px;
-  left: -32px;
 }
+@media screen and (min-width: 414px){
+
+}
+
+@media screen and (min-width: 768px){
+  .top-square {
+    width: 40px;
+    height: 40px;
+    top: -16px;
+    left: -16px;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .top-square {
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: -25px;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .top-square {
+    width: 61px;
+    height: 61px;
+    top: -29px;
+    left: -32px;
+  }
+}
+
 
 /* Reservation */
 
