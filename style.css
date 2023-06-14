@@ -26,7 +26,7 @@ h2 {
 
 h3 {
   font-family: "EB Garamond", serif;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 130%;
   font-weight: 400;
   letter-spacing: 0.005em;
@@ -53,7 +53,7 @@ h5 {
 h6 {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 180%;
   letter-spacing: 0.005em;
@@ -64,7 +64,7 @@ input, select {
 }
 
 p {
-  font-size: 12px;
+  font-size: 16px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -73,18 +73,18 @@ p {
 }
 
 li, span, label{
-  font-size: 12px;
+  font-size: 16px;
 }
 
 button {
   border-radius: 3px;
   width: 105px;
-  height: 30px;
   background: #cdab5e;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 180%;
+  height: 35px;
   letter-spacing: 0.005em;
   color: #000000;
 }
@@ -104,9 +104,8 @@ button:hover {
   }
 
   button {
-    width: 105px;
-    height: 30px;
-    font-size: 12px;
+    width: 125px;
+    height: 35px;
     border-radius: 7px;
   }
 }
@@ -133,14 +132,10 @@ button:hover {
     font-size: 16px;
   }
 
-  p {
-    font-size: 12px;
-  }
-
   button {
     width: 140px;
     height: 40px;
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
@@ -167,11 +162,11 @@ button:hover {
   }
 
   p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   li,span, label{
-    font-size: 14px;
+    font-size: 16px;
   }
 
   button {
@@ -202,14 +197,6 @@ button:hover {
 
   h5, input, select{
     font-size: 20px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  li, span, label{
-    font-size: 16px;
   }
 
   button {
@@ -276,7 +263,6 @@ header {
 
 header .logo {
   /* width: 334px; */
-  margin: 0 10px;
   width: 200px;
   margin-right: auto;
 }
@@ -303,7 +289,7 @@ header a {
     position: relative;
     width: 40px;
     height: 40px;
-    margin: auto 0px;
+    margin: auto 20px;
   }
 
   .hb span {
@@ -406,9 +392,14 @@ header a {
 
 .landing-container {
   position: relative;
+  width: 100%;
 }
 
-@media screen and (max-width: 414px) {
+.landing-area-button {
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 413px) {
   .landing-text {
     position: absolute;
     top: 20%;
@@ -489,10 +480,10 @@ header a {
   }
 
   .welcome-img-area {
-    width: 200px;
+    width: 90%;
     background-color: #244974;
     margin: 30px auto;
-    margin-top: 100px;
+    margin-top: 50px;
     position: relative;
   }
 
@@ -523,7 +514,6 @@ header a {
   }
 
   .welcome-text {
-    width: 200px;
     padding: 10px 40px;
     margin: 10px auto;
   }
@@ -537,12 +527,13 @@ header a {
 @media screen and (min-width: 414px) {
   .welcome-area {
     width: 400px;
-    margin: 100px auto;
+    margin: 60px auto;
   }
 
   .welcome-container {
     display: flex;
     width: 100%;
+    gap: 5%;
   }
 
   .welcome-text {
@@ -574,7 +565,7 @@ header a {
   }
 
   .bottom-circle {
-    bottom: -40px;
+    bottom: 50px;
     left: 0px;
   }
 
@@ -741,14 +732,16 @@ header a {
 }
 
 /*Top-seller*/
+
 .top-seller-area {
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 .top-seller-card {
-  width: 300px;
-  margin: auto;
+  width: 260px;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .top-seller-photo {
@@ -793,6 +786,7 @@ header a {
 
 @media screen and (min-width: 768px){
   .top-seller-card{
+    margin: auto;
     display: flex;
     width: 700px;
   }
@@ -810,14 +804,14 @@ header a {
     width: 50%;
     margin-left: -50px;
     margin-top: 50px;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
   }
 
   .top-seller-photo h2 {
     width: 60px;
     height: 60px;
     line-height: 60px;
-    bottom: -10px;
+    bottom: 20px;
   }
 }
 
@@ -833,14 +827,14 @@ header a {
   .top-seller-text{
     margin-left: -70px;
     margin-top: 70px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
   }
 
   .top-seller-photo h2 {
     width: 90px;
     height: 90px;
     line-height: 90px;
-    bottom: -20px;
+    bottom: 10px;
   }
 
   .top-seller-photo .top-block {
@@ -863,15 +857,16 @@ header a {
   .top-seller-text{
     margin-left: -100px;
     margin-top: 100px;
-    margin-bottom: 70px;
-    gap: 20px;
+    margin-bottom: 150px;
+    gap: 50px;
+    flex-shrink: 0;
   }
 
   .top-seller-photo h2 {
     width: 120px;
     height: 120px;
     line-height: 120px;
-    bottom: -10px;
+    bottom: 40px;
   }
 
   .top-seller-photo .top-block {
@@ -882,23 +877,24 @@ header a {
 @media screen and (min-width: 1600px){
   .top-seller-area{
     margin-top: 450px;
+    width: 1600px;
   }
   .top-seller-card{
-    width: 1500px;
+    width: 90%;
   }
 
   .top-seller-text{
     margin-left: -120px;
     margin-top: 120px;
-    margin-bottom: 90px;
-    gap: 30px;
+    margin-bottom: 200px;
+    gap: 70px;
   }
 
   .top-seller-photo h2 {
     width: 140px;
     height: 140px;
     line-height: 140px;
-    bottom: -40px;
+    bottom: 40px;
   }
 
   .top-seller-photo .top-block {
@@ -917,7 +913,7 @@ header a {
 
 .intro-container {
   width: 300px;
-  margin: 170px auto;
+  margin: 70px auto;
   position: relative;
 }
 
@@ -934,9 +930,36 @@ header a {
 
 .intro-description{
   padding: 10px 20px;
+  position: relative;
+}
+
+.intro-description p{
+  padding-left: 20px;
+}
+
+.intro-description h2{
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.intro-bottom-block{
+  position: absolute;
+  width: 20px;
+  height: 90px;
+  background-color: #244974;
+  top: -5px;
+  left: 0px;
+}
+.intro-description{
+  padding: 10px 20px;
+  position: relative;
 }
 
 @media screen and (min-width: 768px){
+  .intro-bottom-block{
+    display: none;
+  }
+
   .intro-image-right,
   .intro-image-left{
    display: block;
@@ -949,7 +972,7 @@ header a {
   .intro-container {
     margin: 0 auto;
     width: 600px;
-    margin-top: 300px;
+    margin-top: 200px;
   }
   
   .intro-image-bg {
@@ -1240,7 +1263,7 @@ header a {
   }
   
   @media screen and (max-width: 767px){
-  .swiper{
+  .homepage-review .swiper{
     height: 500px;
   }
   }
@@ -1513,7 +1536,6 @@ footer {
   text-align: center;
   margin: 0 auto;
   width: 290px;
-  font-size: 14px;
   padding: 20px 5%;
 }
 
@@ -1619,10 +1641,15 @@ footer {
 }
 
 .list-card-text {
-  padding: 15px 30px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (min-width: 414px){
+  .list-card-text {
+    padding: 15px 30px;
+  }
 }
 
 .card-description{
@@ -1955,7 +1982,7 @@ footer {
 /* calender */
 .calender-container {
   width: 100%;
-  padding: 20px;
+  padding: 10px 20px;
   border: 1px solid #d9d9d9;
   border-radius: 7px;
   box-sizing: border-box;
@@ -1984,14 +2011,14 @@ footer {
   text-align: center;
   display: flex;
   justify-content: space-evenly;
-  padding: 20px 0px;
+  padding: 10px 0px;
 }
 
 .calender-container i {
   color: #cdab5e;
-  font-size: 32px;
-  width: 32px;
-  padding: 20px;
+  font-size: 20px;
+  width: 20px;
+  padding: 10px;
 }
 
 .calender-container select {
@@ -2031,6 +2058,7 @@ footer {
 
   .calender-container {
     margin-left: 10%;
+    padding: 20px;
   }
     .details-review-container {
       width:650px;
@@ -2118,6 +2146,8 @@ footer {
 
 .calender-container i {
   font-size: 24px;
+  width: 32px;
+  padding: 20px;
 }
 
 .calender-container select {
@@ -2166,15 +2196,14 @@ footer {
 
 /* about */
 
-.about-landing-area {
-  display: flex;
-  justify-content: center;
-}
-
 .about-title-container h2 {
   padding: 1.5% 18%;
   width: 100%;
   box-sizing: border-box;
+}
+
+.about-landing-img {
+  width: 100%;
 }
 
 .about-landing-img img{
@@ -2192,7 +2221,7 @@ footer {
 }
 
 .what-area {
-  display: none;
+  display:none;
   justify-content: center;
   background-color: #244974;
 }
@@ -2382,18 +2411,18 @@ footer {
 }
 
 .contact-us-form label {
-  display: inline-block;
+  display: block;
   width: 20%;
   font-family: "Montserrat";
   font-weight: 400;
   line-height: 36px;
   letter-spacing: 0.005em;
   text-align: left;
-  padding-bottom: 7%;
+
 }
 
 .contact-us-form input {
-  width: 70%;
+  width: 90%;
   height: 47px;
   border-radius: 7px;
   border: 1px solid #d9d9d9;
@@ -2407,7 +2436,7 @@ footer {
 }
 
 #cmessage {
-  width: 70%;
+  width: 90%;
   overflow-wrap: wrap;
   font-size: 20px;
   border-radius: 7px;
@@ -2425,6 +2454,19 @@ footer {
 
 
 @media screen and (min-width: 768px){
+  .contact-us-form input {
+    width: 70%;
+  }
+
+  #cmessage {
+    width: 70%;
+  }
+
+  .contact-us-form label {
+    display: inline-block;
+    padding-bottom: 7%;
+  }
+
   .contact-us-form button {
     margin: 30px auto;
   }
@@ -2442,6 +2484,7 @@ footer {
   margin: 0px auto;
   line-height: 250%;
   color: #fff;
+  display: none;
 }
 
 .contact-us-info p {
@@ -2455,6 +2498,10 @@ footer {
 }
 
 @media screen and (min-width: 768px){
+  .contact-us-info h3 {
+    display: block;
+  }
+
   .contact-us-icon {
     padding: 20px 14px;
     font-size: 20px;
@@ -2566,6 +2613,15 @@ footer {
 .reservation-wrap {
   display: flex;
   justify-content: space-between;
+}
+
+.reservation-title{
+  display: none;
+}
+@media screen and (min-width:1280px){
+  .reservation-title{
+    display: block;
+  }
 }
 
 .progress-bar {
@@ -2827,6 +2883,12 @@ footer {
 
 .swiper-scrollbar {
   display: none;
+}
+
+.swiper-button-prev, 
+.swiper-button-next,
+.swiper-pagination{
+  color: #244974 !important;
 }
 
 

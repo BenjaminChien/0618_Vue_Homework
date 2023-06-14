@@ -51,7 +51,7 @@
         <div class="landing-text">
           <h1 class="landing-title">Personalized Private Tours of Paris</h1>
           <a href="tour_list.html"
-            ><button class="landing-area-button">Book a Tour</button></a
+            ><button class="landing-area-button">Book Now</button></a
           >
         </div>
         <div class="sub-photo sub-photo-left">
@@ -93,29 +93,81 @@
     </div>
 
     <!--Top-seller -->
-    <div class="top-seller-area">
-      <div class="top-seller-container">
-        <div class="top-seller-card">
-          <div class="top-seller-photo">
-            <div class="top-block"></div>
-            <img src="Img/Seine_Cruise.jpg" alt="" />
-            <h2 class="bottom-block">01</h2>
-          </div>
-          <div class="top-seller-text">
-            <h2 class="top-seller-title">
-              Enchanting Seine: <br>Captivating River Cruises
-            </h2>
-            <p class="top-seller-description">
-              Experience the magic as iconic landmarks glide past, from the
-              enchanting Notre-Dame Cathedral to the majestic Eiffel Tower.
-            </p>
-            <div class="top-seller-button">
-              <a href="tour_details.html"><button>Book now</button></a>
+      <div class="top-seller-area">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="top-seller-container swiper-slide">
+              <div class="top-seller-card">
+                <div class="top-seller-photo">
+                  <div class="top-block"></div>
+                  <img src="Img/Top_Seine_Cruise.jpg" alt="" />
+                  <h2 class="bottom-block">01</h2>
+                </div>
+                <div class="top-seller-text">
+                  <h2 class="top-seller-title">
+                    Enchanting Seine: <br>Captivating River Cruises
+                  </h2>
+                  <p class="top-seller-description">
+                    Experience the magic as iconic landmarks glide past, from the
+                    enchanting Notre-Dame Cathedral to the majestic Eiffel Tower.
+                  </p>
+                  <div class="top-seller-button">
+                    <a href="tour_details.html"><button>Book now</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="top-seller-container swiper-slide">
+              <div class="top-seller-card">
+                <div class="top-seller-photo">
+                  <div class="top-block"></div>
+                  <img src="Img/Top_Effiel_tower.jpg" alt="" />
+                  <h2 class="bottom-block">02</h2>
+                </div>
+                <div class="top-seller-text">
+                  <h2 class="top-seller-title">
+                    Eiffel Tower <br>Sunset Tour
+                  </h2>
+                  <p class="top-seller-description">
+                    Experience the magic as iconic landmarks glide past, from the enchanting Notre-Dame Cathedral to the majestic Eiffel Tower.
+                  </p>
+                  <div class="top-seller-button">
+                    <a href="tour_details.html"><button>Book now</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="top-seller-container swiper-slide">
+              <div class="top-seller-card">
+                <div class="top-seller-photo">
+                  <div class="top-block"></div>
+                  <img src="Img/Top_louvre.jpg" alt="" />
+                  <h2 class="bottom-block">03</h2>
+                </div>
+                <div class="top-seller-text">
+                  <h2 class="top-seller-title">
+                    Louvre Museum <br> Highlights Tour
+                  </h2>
+                  <p class="top-seller-description">
+                    Experience the magic as iconic landmarks glide past, from the enchanting Notre-Dame Cathedral to the majestic Eiffel Tower.
+                  </p>
+                  <div class="top-seller-button">
+                    <a href="tour_details.html"><button>Book now</button></a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
         </div>
       </div>
-    </div>
+
 
     <!--Intro-area -->
     <div class="intro-area">
@@ -140,12 +192,18 @@
             </div>
           </div>
         </div>
-        <p class="intro-description">
-          Rooster Travel We believe that travel should be a journey of
-          discovery, offering a deeper understanding of the places we visit.
-          With our expert guides by your side, you'll gain unique insights into
-          the rich history, cultural nuances, and hidden gems of Paris.
-        </p>
+        <div class="intro-description">
+          <h2>
+            Illuminate Paris for you, <br>create lifelong memories
+          </h2>
+          <p>
+            Rooster Travel believe that travel should be a journey of
+            discovery, offering a deeper understanding of the places we visit.
+            With our expert guides by your side, you'll gain unique insights into
+            the rich history, cultural nuances, and hidden gems of Paris.
+          </p>
+          <div class="intro-bottom-block"></div>
+        </div>
       </div>
     </div>
 
@@ -232,71 +290,70 @@
 
     <!--homepage-Review-->
 
-    <div class="swiper homepage-review">
-      <div class="swiper-wrapper">
-        <!-- Slides -->       
-        <div class="swiper-slide">
-          <div class="review-card">
-            <div class="review-text">
-              <h2 class="quote">“</h2>
-              <p class="comment">
-                “ Our guide, Sarah, was incredibly passionate and well-versed in
-                the art world. She expertly provided insightful commentary on
-                the works of Monet and other renowned artists.”
-              </p>
-              <p class="review-name">Marie Johnson</p>
-              <p class="review-tour">Musée de l'Orangerie Tour</p>
+    <div class="homepage-review">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="review-card">
+              <div class="review-text">
+                <h2 class="quote">“</h2>
+                <p class="comment">
+                  “ Our guide was well-versed in
+                  the art world. She provided insightful commentary on
+                  the works of Monet and other renowned artists.”
+                </p>
+                <p class="review-name">Marie Johnson</p>
+                <p class="review-tour">Musée de l'Orangerie Tour</p>
+              </div>
+              <div class="review-img">
+                <img src="Img/People_Chilling.jpg" alt="" />
+                <div class="review-bottom-circle"></div>
+              </div>
             </div>
-            <div class="review-img">
-              <img src="Img/People_Chilling.jpg" alt="" />
-              <div class="review-bottom-circle"></div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review-card">
+              <div class="review-text">
+                <h2 class="quote">“</h2>
+                <p class="comment">
+                  “ The panoramic views from the top of the monument were simply breathtaking, showcasing the city's timeless charm. ”
+                </p>
+                <p class="review-name">Ichiro Otani</p>
+                <p class="review-tour">Eiffel Tower Sunset Tour</p>
+              </div>
+              <div class="review-img">
+                <img src="Img/review_arc.jpg" alt="" />
+                <div class="review-bottom-circle"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review-card">
+              <div class="review-text">
+                <h2 class="quote">“</h2>
+                <p class="comment">
+                  “ The Château de Versailles Tour was an exquisite journey into the grandeur and magnificence of French history. ”
+                </p>
+                <p class="review-name">Rosa Curie</p>
+                <p class="review-tour">Louvre Museum Highlights Tour</p>
+              </div>
+              <div class="review-img">
+                <img src="Img/review_fountain.jpg" alt="" />
+                <div class="review-bottom-circle"></div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="swiper-slide">
-          <div class="review-card">
-            <div class="review-text">
-              <h2 class="quote">“</h2>
-              <p class="comment">
-                “ The panoramic views from the top of the monument were simply breathtaking, showcasing the city's timeless charm. ”
-              </p>
-              <p class="review-name">Ichiro Otani</p>
-              <p class="review-tour">Eiffel Tower Sunset Tour</p>
-            </div>
-            <div class="review-img">
-              <img src="Img/review_arc.jpg" alt="" />
-              <div class="review-bottom-circle"></div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="review-card">
-            <div class="review-text">
-              <h2 class="quote">“</h2>
-              <p class="comment">
-                “ The Château de Versailles Tour was an exquisite journey into the grandeur and magnificence of French history. ”
-              </p>
-              <p class="review-name">Rosa Curie</p>
-              <p class="review-tour">Louvre Museum Highlights Tour</p>
-            </div>
-            <div class="review-img">
-              <img src="Img/review_fountain.jpg" alt="" />
-              <div class="review-bottom-circle"></div>
-            </div>
-          </div>
-        </div>
-        ...
-      </div>
       
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
     </div>
 
     <!--Footer-->
