@@ -26,12 +26,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
-    <div id="app">
+  <div id="app">
     <!--header-->
     <input type="checkbox" id="menu-switch" />
     <header>
-      <a href="index.html" class="logo">
-        <img src="Img/logo_svg.svg" alt="" />
+      <a :href=home.link class="logo">
+        <img :src=siteInfo.logSrc alt="" />
       </a>
       <label for="menu-switch" class="hb">
         <span></span>
@@ -43,11 +43,8 @@
           {{ item.name }}
         </a>
       </div>
-      </div>
     </header>
-        <!-- <a href="tour_list.html">Book a tour</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a> -->
+
     <!--Landing-area grid-->
     <div class="landing-area">
       <div class="landing-container">
@@ -74,13 +71,9 @@
     <div class="welcome-area">
       <div class="welcome-container">
         <div class="welcome-text">
-          <h2 class="welcome-title">
-            Unveil Paris<br />
-            With Local Guide!
-          </h2>
+          <h2 class="welcome-title" v-html="welcomeArea.title"></h2>
           <p class="welcome-description">
-            Discover iconic landmarks, hidden gems, and immerse yourself in the
-            charm of the city with our expert guides.
+            {{ welcomeArea.title }}
           </p>
           <div class="welcome-button">
             <a href="tour_list.html"><button>Tour List</button></a>
@@ -104,16 +97,14 @@
               <div class="top-seller-card">
                 <div class="top-seller-photo">
                   <div class="top-block"></div>
-                  <img src="Img/Top_Seine_Cruise.jpg" alt="" />
+                  <img :src="topSeller.Seine_Cruise.img" alt="" />
                   <h2 class="bottom-block">01</h2>
                 </div>
                 <div class="top-seller-text">
-                  <h2 class="top-seller-title">
-                    Enchanting Seine: <br>Captivating River Cruises
+                  <h2 class="top-seller-title" v-html="topSeller.Seine_Cruise.title">
                   </h2>
                   <p class="top-seller-description">
-                    Experience the magic as iconic landmarks glide past, from the
-                    enchanting Notre-Dame Cathedral to the majestic Eiffel Tower.
+                    {{topSeller.Seine_Cruise.description}}
                   </p>
                   <div class="top-seller-button">
                     <a href="tour_details.html"><button>Book now</button></a>
@@ -392,30 +383,64 @@
     </footer>
   </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
        Vue.createApp({
     data() {
       return {
+        home: {
+          index:'home',
+          link:'index.html'
+        },
+        siteInfo: {
+          logSrc:'Img/logo_svg.svg'
+        },
         menu: [
           {
+            index:'tour_list',
             link: 'tour_list.html',
             name: 'Book a tour'
           },
           {
+            index: 'about',
             link: 'about.html',
             name: 'About'
           },
           {
+            index:'contact',
             link: 'contact.html',
             name: 'Contact'
           }
-        ]
+        ],
+        welcomeArea: {
+          index: 'welcomeArea',
+          title:'Unveil Paris<br>With Local Guide!',
+          description:'Discover iconic landmarks, hidden gems, and immerse yourself in the charm of the city with our expert guides.'
+        },
+        topSeller:{
+          Seine_Cruise:{
+            img:'Img/Top_Seine_Cruise.jpg',
+            title:'Enchanting Seine: <br>Captivating River Cruises',
+            description:'Experience the magic as iconic landmarks glide past, from the enchanting Notre-Dame Cathedral to the majestic Eiffel Tower'
+          },
+          Effiel_tower:{
+            img:'Img/Top_Effiel_tower.jpg',
+            title:' Eiffel Tower <br>Sunset Tour',
+            description:'Experience the magic as iconic landmarks glide past, from the enchanting Notre-Dame Cathedral to the majestic Eiffel Tower.'
+          },
+          louvre:{
+            img:'Img/Top_louvre.jpg',
+            title:'Louvre Museum <br> Highlights Tour',
+            description:'Experience the magic as iconic landmarks glide past, from the enchanting Notre-Dame Cathedral to the majestic Eiffel Tower.'
+          }
+        }
       }
     },
   }).mount('#app');
+
     </script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="script.js"></script>
   </body>
 </html>
