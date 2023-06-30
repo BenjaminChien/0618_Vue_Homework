@@ -26,11 +26,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
+  <div id="app">
     <!--header-->
     <input type="checkbox" id="menu-switch" />
     <header>
-      <a href="index.html" class="logo">
-        <img src="Img/logo_svg.svg" alt="" />
+      <a :href=home.link class="logo">
+        <img :src=siteInfo.logSrc alt="" />
       </a>
       <label for="menu-switch" class="hb">
         <span></span>
@@ -38,9 +39,9 @@
         <span></span>
       </label>
       <div class="nav-list">
-        <a href="tour_list.html">Book a tour</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a :href=item.link v-for="item in menu" :key="item.link" >
+          {{ item.name }}
+        </a>
       </div>
     </header>
 
@@ -70,13 +71,9 @@
     <div class="welcome-area">
       <div class="welcome-container">
         <div class="welcome-text">
-          <h2 class="welcome-title">
-            Unveil Paris<br />
-            With Local Guide!
-          </h2>
+          <h2 class="welcome-title" v-html="welcomeArea.title"></h2>
           <p class="welcome-description">
-            Discover iconic landmarks, hidden gems, and immerse yourself in the
-            charm of the city with our expert guides.
+            {{ welcomeArea.title }}
           </p>
           <div class="welcome-button">
             <a href="tour_list.html"><button>Tour List</button></a>
@@ -100,16 +97,14 @@
               <div class="top-seller-card">
                 <div class="top-seller-photo">
                   <div class="top-block"></div>
-                  <img src="Img/Top_Seine_Cruise.jpg" alt="" />
+                  <img :src="topSeller.Seine_Cruise.img" alt="" />
                   <h2 class="bottom-block">01</h2>
                 </div>
                 <div class="top-seller-text">
-                  <h2 class="top-seller-title">
-                    Enchanting Seine: <br>Captivating River Cruises
+                  <h2 class="top-seller-title" v-html="topSeller.Seine_Cruise.title">
                   </h2>
                   <p class="top-seller-description">
-                    Experience the magic as iconic landmarks glide past, from the
-                    enchanting Notre-Dame Cathedral to the majestic Eiffel Tower.
+                    {{topSeller.Seine_Cruise.description}}
                   </p>
                   <div class="top-seller-button">
                     <a href="tour_details.html"><button>Book now</button></a>
@@ -350,40 +345,66 @@
         </div>
       </div>
     </footer>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
-        Vue.createApp({
-            data() {
-                return {
-                  slide: [
-                    {
-                      comment: `“ Our guide was well-versed in
-                      the art world. She provided insightful commentary on
-                      the works of Monet and other renowned artists.”`,
-                      reviewName: 'Marie Johnson',
-                      reviewTour: "Musée de l'Orangerie Tour",
-                      reviewImg: "Img/People_Chilling.jpg"
-                    },
-                    {
-                      comment: `“ The panoramic views from the top of the monument were simply breathtaking, showcasing the city's timeless charm. ”`,
-                      reviewName: 'Ichiro Otani',
-                      reviewTour: "Eiffel Tower Sunset Tour",
-                      reviewImg: "Img/review_arc.jpg"
-                    },
-                    {
-                      comment: `“ The Château de Versailles Tour was an exquisite journey into the grandeur and magnificence of French history. ”`,
-                      reviewName: 'Rosa Curie',
-                      reviewTour: "Louvre Museum Highlights Tour",
-                      reviewImg: "Img/review_fountain.jpg"
-                    }
-                  ],
-                }
-            }
-        }).mount('#review-app')
+       Vue.createApp({
+    data() {
+      return {
+        home: {
+          index:'home',
+          link:'index.html'
+        },
+        siteInfo: {
+          logSrc:'Img/logo_svg.svg'
+        },
+        menu: [
+          {
+            index:'tour_list',
+            link: 'tour_list.html',
+            name: 'Book a tour'
+          },
+          {
+            index: 'about',
+            link: 'about.html',
+            name: 'About'
+          },
+          {
+            index:'contact',
+            link: 'contact.html',
+            name: 'Contact'
+          }
+        ],
+        welcomeArea: {
+          index: 'welcomeArea',
+          title:'Unveil Paris<br>With Local Guide!',
+          description:'Discover iconic landmarks, hidden gems, and immerse yourself in the charm of the city with our expert guides.'
+        },
+        topSeller:{
+          Seine_Cruise:{
+            img:'Img/Top_Seine_Cruise.jpg',
+            title:'Enchanting Seine: <br>Captivating River Cruises',
+            description:'Experience the magic as iconic landmarks glide past, from the enchanting Notre-Dame Cathedral to the majestic Eiffel Tower'
+          },
+          Effiel_tower:{
+            img:'Img/Top_Effiel_tower.jpg',
+            title:' Eiffel Tower <br>Sunset Tour',
+            description:'Experience the magic as iconic landmarks glide past, from the enchanting Notre-Dame Cathedral to the majestic Eiffel Tower.'
+          },
+          louvre:{
+            img:'Img/Top_louvre.jpg',
+            title:'Louvre Museum <br> Highlights Tour',
+            description:'Experience the magic as iconic landmarks glide past, from the enchanting Notre-Dame Cathedral to the majestic Eiffel Tower.'
+          }
+        }
+      }
+    },
+  }).mount('#app');
+
     </script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="script.js"></script>
   </body>
 </html>
