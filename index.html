@@ -73,7 +73,7 @@
         <div class="welcome-text">
           <h2 class="welcome-title" v-html="welcomeArea.title"></h2>
           <p class="welcome-description">
-            {{ welcomeArea.title }}
+            {{ welcomeArea.description }}
           </p>
           <div class="welcome-button">
             <a href="tour_list.html"><button>Tour List</button></a>
@@ -93,58 +93,18 @@
       <div class="top-seller-area">
         <div class="swiper">
           <div class="swiper-wrapper">
-            <div class="top-seller-container swiper-slide">
+            <div class="top-seller-container swiper-slide" v-for="(item, itemIndex) in topSeller" :key="item.index">
               <div class="top-seller-card">
                 <div class="top-seller-photo">
                   <div class="top-block"></div>
-                  <img :src="topSeller.Seine_Cruise.img" alt="" />
-                  <h2 class="bottom-block">01</h2>
+                  <img :src="item.img" alt="" />
+                  <h2 class="bottom-block">0{{itemIndex+1}}</h2>
                 </div>
                 <div class="top-seller-text">
-                  <h2 class="top-seller-title" v-html="topSeller.Seine_Cruise.title">
+                  <h2 class="top-seller-title" v-html="item.title">
                   </h2>
                   <p class="top-seller-description">
-                    {{topSeller.Seine_Cruise.description}}
-                  </p>
-                  <div class="top-seller-button">
-                    <a href="tour_details.html"><button>Book now</button></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="top-seller-container swiper-slide">
-              <div class="top-seller-card">
-                <div class="top-seller-photo">
-                  <div class="top-block"></div>
-                  <img src="Img/Top_Effiel_tower.jpg" alt="" />
-                  <h2 class="bottom-block">02</h2>
-                </div>
-                <div class="top-seller-text">
-                  <h2 class="top-seller-title">
-                    Eiffel Tower <br>Sunset Tour
-                  </h2>
-                  <p class="top-seller-description">
-                    Experience the magic as iconic landmarks glide past, from the enchanting Notre-Dame Cathedral to the majestic Eiffel Tower.
-                  </p>
-                  <div class="top-seller-button">
-                    <a href="tour_details.html"><button>Book now</button></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="top-seller-container swiper-slide">
-              <div class="top-seller-card">
-                <div class="top-seller-photo">
-                  <div class="top-block"></div>
-                  <img src="Img/Top_louvre.jpg" alt="" />
-                  <h2 class="bottom-block">03</h2>
-                </div>
-                <div class="top-seller-text">
-                  <h2 class="top-seller-title">
-                    Louvre Museum <br> Highlights Tour
-                  </h2>
-                  <p class="top-seller-description">
-                    Experience the magic as iconic landmarks glide past, from the enchanting Notre-Dame Cathedral to the majestic Eiffel Tower.
+                    {{item.description}}
                   </p>
                   <div class="top-seller-button">
                     <a href="tour_details.html"><button>Book now</button></a>
@@ -382,23 +342,26 @@
                     title:'Unveil Paris<br>With Local Guide!',
                     description:'Discover iconic landmarks, hidden gems, and immerse yourself in the charm of the city with our expert guides.'
                   },
-                  topSeller:{
-                    Seine_Cruise:{
+                  topSeller:[
+                    {
+                      comment:'Seine_Cruise',
                       img:'Img/Top_Seine_Cruise.jpg',
                       title:'Enchanting Seine: <br>Captivating River Cruises',
-                      description:'Experience the magic as iconic landmarks glide past, from the enchanting Notre-Dame Cathedral to the majestic            Eiffel Tower'
+                      description:'Experience the magic as iconic landmarks glide past, from the enchanting Notre-Dame Cathedral to the majestic Eiffel Tower.'
                     },
-                    Effiel_tower:{
+                    {
+                      comment:'Effiel_tower',
                       img:'Img/Top_Effiel_tower.jpg',
                       title:' Eiffel Tower <br>Sunset Tour',
-                      description:'Experience the magic as iconic landmarks glide past, from the enchanting Notre-Dame Cathedral to the majestic            Eiffel Tower.'
+                      description:'Experience the magic as iconic landmarks glide past, from the enchanting Notre-Dame Cathedral to the majestic Eiffel Tower.'
                     },
-                    louvre:{
+                    {
+                      comment:'louvre',
                       img:'Img/Top_louvre.jpg',
                       title:'Louvre Museum <br> Highlights Tour',
-                      description:'Experience the magic as iconic landmarks glide past, from the enchanting Notre-Dame Cathedral to the majestic            Eiffel Tower.'
+                      description:'Experience the magic as iconic landmarks glide past, from the enchanting Notre-Dame Cathedral to the majestic Eiffel Tower.'
                     }
-                  },
+                  ],
                   slide: [
                     {
                       comment: `“ Our guide was well-versed in
@@ -423,7 +386,7 @@
                   ],
                 }
             }
-        }).mount('#review-app')
+        }).mount('#app')
     </script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
         <script src="script.js"></script>
