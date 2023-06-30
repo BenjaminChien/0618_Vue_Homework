@@ -292,54 +292,18 @@
 
     <div class="homepage-review">
       <div class="swiper">
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper" id="review-app">
           <!-- Slides -->
-          <div class="swiper-slide">
+          <div class="swiper-slide" v-for="(slideValue, slidekey, slideIndex) in slide" :key="slideIndex">
             <div class="review-card">
               <div class="review-text">
                 <h2 class="quote">“</h2>
-                <p class="comment">
-                  “ Our guide was well-versed in
-                  the art world. She provided insightful commentary on
-                  the works of Monet and other renowned artists.”
-                </p>
-                <p class="review-name">Marie Johnson</p>
-                <p class="review-tour">Musée de l'Orangerie Tour</p>
+                  <p class="comment">{{slideValue.comment}}</p>
+                  <p class="review-name">{{slideValue.reviewName}}</p>
+                  <p class="review-tour">{{slideValue.reviewTour}}</p>
               </div>
               <div class="review-img">
-                <img src="Img/People_Chilling.jpg" alt="" />
-                <div class="review-bottom-circle"></div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="review-card">
-              <div class="review-text">
-                <h2 class="quote">“</h2>
-                <p class="comment">
-                  “ The panoramic views from the top of the monument were simply breathtaking, showcasing the city's timeless charm. ”
-                </p>
-                <p class="review-name">Ichiro Otani</p>
-                <p class="review-tour">Eiffel Tower Sunset Tour</p>
-              </div>
-              <div class="review-img">
-                <img src="Img/review_arc.jpg" alt="" />
-                <div class="review-bottom-circle"></div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="review-card">
-              <div class="review-text">
-                <h2 class="quote">“</h2>
-                <p class="comment">
-                  “ The Château de Versailles Tour was an exquisite journey into the grandeur and magnificence of French history. ”
-                </p>
-                <p class="review-name">Rosa Curie</p>
-                <p class="review-tour">Louvre Museum Highlights Tour</p>
-              </div>
-              <div class="review-img">
-                <img src="Img/review_fountain.jpg" alt="" />
+                <img :src="slideValue.reviewImg"/>
                 <div class="review-bottom-circle"></div>
               </div>
             </div>
@@ -389,5 +353,37 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                  slide: [
+                    {
+                      comment: `“ Our guide was well-versed in
+                      the art world. She provided insightful commentary on
+                      the works of Monet and other renowned artists.”`,
+                      reviewName: 'Marie Johnson',
+                      reviewTour: "Musée de l'Orangerie Tour",
+                      reviewImg: "Img/People_Chilling.jpg"
+                    },
+                    {
+                      comment: `“ The panoramic views from the top of the monument were simply breathtaking, showcasing the city's timeless charm. ”`,
+                      reviewName: 'Ichiro Otani',
+                      reviewTour: "Eiffel Tower Sunset Tour",
+                      reviewImg: "Img/review_arc.jpg"
+                    },
+                    {
+                      comment: `“ The Château de Versailles Tour was an exquisite journey into the grandeur and magnificence of French history. ”`,
+                      reviewName: 'Rosa Curie',
+                      reviewTour: "Louvre Museum Highlights Tour",
+                      reviewImg: "Img/review_fountain.jpg"
+                    }
+                  ],
+                }
+            }
+        }).mount('#review-app')
+    </script>
   </body>
 </html>
