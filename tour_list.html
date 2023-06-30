@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Tour List -Rooster Travel</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css" />
+  <title>Tour List -Rooster Travel</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
+  <link rel="stylesheet" href="style.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  </head>
-  <body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<body>
+  <div id="app">
     <input type="checkbox" id="menu-switch" />
     <header>
       <a href="index.html" class="logo">
@@ -61,20 +57,23 @@
 
     <div class="list-area">
       <div class="list-container">
+        <!-- listSection -->
         <h3 class="list-title">Top Seller</h3>
         <p class="list-description">
           Experience the pinnacle of Parisian allure with our Top Seller
           collection.
         </p>
-        <div class="list-card-wrap">
+        <div class="list-card-wrap" v-for="item in listCard" :key="listCard.index">
           <a href="tour_details.html" class="list-card">
-            <img src="Img/List_Effiel_Tower.jpg" alt="" />
+            <img :src="item.img" alt="" />
             <div class="list-card-text">
               <p class="avaliable-time">Available Daily</p>
-              <h4 class="card-title">Eiffel Tower Sunset Tour</h4>
+              <h4 class="card-title">{{item.title}}</h4>
+              <!-- Eiffel Tower Sunset Tour -->
               <p class="card-description">
-                Immerse yourself in the romantic ambiance of Paris as you
-                witness a breathtaking sunset from the iconic Eiffel Tower.
+                {{item.text}}
+                <!-- Immerse yourself in the romantic ambiance of Paris as you
+                witness a breathtaking sunset from the iconic Eiffel Tower. -->
               </p>
               <div class="card-rating">
                 <div class="stars">
@@ -90,7 +89,8 @@
             </div>
           </a>
 
-          <a href="tour_details.html" class="list-card">
+
+          <!-- <a href="tour_details.html" class="list-card">
             <img src="Img/List_Louvre_Museum.jpg" alt="" />
             <div class="list-card-text">
               <p class="avaliable-time">Available Daily</p>
@@ -111,9 +111,9 @@
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
             </div>
-          </a>
+          </a> -->
 
-          <a href="tour_details.html" class="list-card">
+          <!-- <a href="tour_details.html" class="list-card">
             <img src="Img/List_Seine_Cruise.jpg" alt="" />
             <div class="list-card-text">
               <p class="avaliable-time">Available Daily</p>
@@ -134,7 +134,7 @@
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
             </div>
-          </a>
+          </a> -->
         </div>
       </div>
 
@@ -462,10 +462,20 @@
         </div>
         <div class="contact-links">
           <p class="contact-title">Links:</p>
-          <a href="index.html">Home</a>
-          <a href="tour_list.html">Tours</a>
+          <!-- (item, arrayKey)? or item -->
+          <div v-for="item in menu" :key="item.name">
+            <a :href="item.link">{{item.name}}</a>
+          </div>
+
+          <!-- <a href="tour_list.html">Tours</a>
           <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
+          <a href="contact.html">Contact</a> -->
+
+          <!-- original-Version---below -->
+          <!-- <a href="index.html">Home</a>
+            <a href="tour_list.html">Tours</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a> -->
         </div>
         <div class="contact-social-media">
           <div class="media-icons">
@@ -478,5 +488,56 @@
         </div>
       </div>
     </footer>
-  </body>
+  </div>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <script>
+    Vue.createApp({
+      data() {
+        return {
+
+          menu: [
+            {
+              // index: 'Home',
+              link: 'index.html',
+              name: 'Home'
+            },
+            {
+              link: 'tour_list.html',
+              name: 'Tours'
+            },
+            {
+              link: 'about.html',
+              name: 'About'
+            },
+            {
+              link: 'contact.html',
+              name: 'Contact'
+            }
+          ],
+          listCard: [
+            {
+              img: 'Img/List_Effiel_Tower.jpg',
+              title: 'Eiffel Tower Sunset Tour',
+              text: ' Immerse yourself in the romantic ambiance of Paris as you witness a breathtaking sunset from the iconic Eiffel Tower.'
+            },
+            {
+              img: 'Img/List_Louvre_Museum.jpg',
+              title: 'Louvre Museum Highlights Tour',
+              text: "Our knowledgeable guide will lead you to the museum's mosticonic masterpieces sharing fascinating stories."
+            },
+            {
+              img: 'Img/List_Seine_Cruise.jpg',
+              title: 'Seine River Dinner Cruise',
+              text: " Delight in gourmet cuisine, panoramic views of Paris's illuminated landmarks, and live entertainment."
+            }
+          ]
+
+
+        }
+      }
+    }).mount('#app')
+  </script>
+</body>
+
 </html>
